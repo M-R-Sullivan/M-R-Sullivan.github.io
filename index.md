@@ -1,11 +1,10 @@
 ---
 layout: frontpage
-title: Blue Ham
-description: Blue Ham is a PhD candidate at Broom University. 
-keywords: Blue, Ham, treats, recycling, mail, being a good boy
+title: Michael R Sullivan
+description: I'm a PhD student in the Deparatment of Economics at Yale University. 
 ---
 
-Blue Ham is a PhD candidate at Broom University. His research interests include analyzing the effectiveness of treat-based incentives such as recycling and getting the mail, as well as designing new methods to protect humans from the adverse effects of rolling trash receptacles.
+I'm a PhD student in the Department of Economics at Yale University. I'm studying industrial organization and applied econometrics, with a focus on online industries, modelling of network externalities in consumer choice problems, and consumer search. 
 
 [curriculum vitae ![CV as pdf]({{ BASE_PATH }}/pages/icons16/pdf-icon.png)]({{ BASE_PATH }}/assets/CV.pdf)<br/>
 
@@ -18,14 +17,14 @@ Blue Ham is a PhD candidate at Broom University. His research interests include 
 
     <div class="row-fluid">
         <div class="span5">
-            Blue Ham<br/>
-            Email: WOOFWOOF@goodboy.com<br/>
+            Michael Sullivan <br/>
+            Email: m.r.sullivan@yale.edu<br/>
         </div>
 
         <div class="span2">
         <a href="../assets/headshot.jpg">
-            <img src="../assets/headshot.jpg"
-                  title="Blue Ham" alt="Blue Ham"/></a>
+            <img src="../assets/econ_headshot.jpg"
+                  title="Michael Sullivan" alt="Michael Sullivan"/></a>
         </div>
     </div>
 </div>
