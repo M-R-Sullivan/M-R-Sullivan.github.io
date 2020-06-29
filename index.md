@@ -6,7 +6,7 @@ description: I'm a PhD student in the Department of Economics at Yale University
 
 I'm a PhD student in the Department of Economics at Yale University. I'm studying industrial organization and applied econometrics, with a focus on online industries, modelling of network externalities in consumer choice problems, and consumer search. 
 
-[curriculum vitae ![CV as pdf]({{ BASE_PATH }}/pages/icons16/pdf-icon.png)]({{ BASE_PATH }}/assets/cv/cv.pdf)<br/>
+[CV ![CV as pdf]({{ BASE_PATH }}/pages/icons16/pdf-icon.png)]({{ BASE_PATH }}/assets/cv/cv.pdf)<br/>
 
 
 ---
