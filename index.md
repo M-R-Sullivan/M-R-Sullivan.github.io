@@ -22,7 +22,7 @@ I'm a PhD student in the Department of Economics at Yale University. I'm studyin
         </div>
 
         <div class="span2">
-        <a href="../assets/headshot.jpg">
+        <a href="../assets/econ_headshot.jpg">
             <img src="../assets/econ_headshot.jpg"
                   title="Michael Sullivan" alt="Michael Sullivan"/></a>
         </div>
@@ -32,7 +32,7 @@ I'm a PhD student in the Department of Economics at Yale University. I'm studyin
 <div class="navbar">
   <div class="navbar-inner">
       <ul class="nav">
-          <li><a href="{{ BASE_PATH }}/assets/CV.pdf">cv</a></li>
+          <li><a href="{{ BASE_PATH }}/assets/cv/cv.pdf">cv</a></li>
           <li><a href="https://github.com/M-R-Sullivan">GitHub</a></li>
           <li><a href="https://twitter.com/M_R_Sullivan">Twitter (@M_R_Sullivan)</a></li>
       </ul>

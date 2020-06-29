@@ -1,15 +1,32 @@
 ---
 layout: page
 title: Research
-description: Blue Ham's research
+description: Michael Sullivan's research
 ---
 
+## Works in progress
+
+#### <u>Network externalities in the dating website industry</u>
+
+*This paper characterizes the identification of discrete choice models
+featuring network externalities (i.e. the dependence of 
+consumers' choice-specific payoffs on other consumers' choices)
+and uses such a model to study consumers' choice of dating websites.
+I show that a general discrete choice model in which
+market shares enter consumers' utilities is not identified with access
+to market-level data (i.e. data on product characteristics and aggegate market shares
+across distinct markets). This nonidentification
+reflects that network externalities tend to amplify or dampen the effects of 
+product characteristics on tastes. Under certain conditions, microdata allows
+for the identification of the model.
+I proceed to estimate a model of dating website choice with network externalities, which
+I used to study how network externalities affect the effects of changes in
+market characteristics on various outcomes.*
+
+#### <u>Pre-search information and inertia in online consumer search for contact lenses</u>
 
 
-#### <u>The effects of increased eye contact on feeding portions</u>
-*In this paper I estimate the effect of increased eye contact on the size of feeding portions delivered by my humans. Over a period of several months I varied the amount of time I spent in locked eye contact with my masters while secretely recording the total amount of food provided each day. The results incidate that the relationship between eye contact and portion size is concave, in that as eye contact increases, the portion size increases up until a point where it begins to decrease. Future research will examine whether time spent cuddling exhibits a similar relationship.*
 
-[click here for the most recent version of the paper]({{ BASE_PATH}}/pages/working_papers/sample-working-paper.pdf)
 
 
 <!-- Note: this is how to write a comment in HTML. Everything in here won't show up on your webpage.-->
