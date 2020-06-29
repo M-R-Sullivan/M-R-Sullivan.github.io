@@ -13,8 +13,8 @@ featuring network externalities (i.e. the dependence of
 consumers' choice-specific payoffs on other consumers' choices)
 and uses such a model to study consumers' choice of dating websites.
 I show that a general discrete choice model in which
-market shares enter consumers' utilities is not identified with access
-to market-level data (i.e. data on product characteristics and aggegate market shares
+market shares enter consumers' utilities is not identified with 
+only market-level data (i.e. data on product characteristics and aggegate market shares
 across distinct markets). This nonidentification
 reflects that network externalities tend to amplify or dampen the effects of 
 product characteristics on tastes. Under certain conditions, microdata allows

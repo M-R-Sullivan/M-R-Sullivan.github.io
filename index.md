@@ -13,7 +13,7 @@ I'm a PhD student in the Department of Economics at Yale University. I'm studyin
 
 
 <div class="container">
-<h4><a name="contact"></a>contact</h4>
+<h4><a name="Contact"></a>Contact</h4>
 
     <div class="row-fluid">
         <div class="span5">
