@@ -22,8 +22,8 @@ I'm a PhD student in the Department of Economics at Yale University. I'm studyin
         </div>
 
         <div class="span2">
-        <a href="../assets/econ_headshot.jpg">
-            <img src="../assets/econ_headshot.jpg"
+        <a href="../assets/second_headshot.jpg">
+            <img src="../assets/second_headshot.jpg"
                   title="Michael Sullivan" alt="Michael Sullivan"/></a>
         </div>
     </div>
