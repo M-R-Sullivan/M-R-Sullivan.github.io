@@ -8,6 +8,8 @@ description: Michael Sullivan's research
 
 #### <u>Network externalities in the dating website industry</u>
 
+[Link ![NetExt as pdf]({{ BASE_PATH }}/pages/icons16/pdf-icon.png)]({{ BASE_PATH }}/assets/papers/next_aug2020.pdf)<br/>
+
 *This paper characterizes the identification of discrete choice models
 featuring network externalities (i.e. the dependence of 
 consumers' choice-specific payoffs on other consumers' choices)
@@ -22,6 +24,8 @@ for the identification of the model.
 I proceed to estimate a model of dating website choice with network externalities, which
 I used to study how network externalities affect the effects of changes in
 market characteristics on various outcomes.*
+
+
 
 #### <u>Pre-search information and inertia in online consumer search for contact lenses</u>
 
