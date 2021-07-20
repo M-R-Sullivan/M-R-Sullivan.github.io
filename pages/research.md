@@ -44,6 +44,19 @@ Michael Sullivan is supported in part by funding from the Social Sciences and Hu
     </a>
 </div>
 
+<div class="container">
+<h4><a name="Contact"></a>SSHRC</h4>
+
+    <div class="row-fluid">
+        <div class="span2">
+        <a href="../assets/sshrc-fip-full-black-eng.jpg">
+            <img src="../assets/sshrc-fip-full-black-eng.jpg"
+                  title="SSHRC" alt="SSHRC"/></a>
+        </div>
+    </div>
+</div>
+
+
 
 <!-- Note: this is how to write a comment in HTML. Everything in here won't show up on your webpage.-->
 
