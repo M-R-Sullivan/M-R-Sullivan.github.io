@@ -36,22 +36,15 @@ market characteristics on various outcomes.*
 
 Michael Sullivan is supported in part by funding from the Social Sciences and Humanities Research Council.
 
----
-<div class="container">
-    <a href="../assets/sshrc-fip-full-black-eng.jpg">
-        <img src="../assets/sshrc-fip-full-black-eng.jpg"
-              title="SSHRC_ack" alt="SSHRC_ack"/>
-    </a>
-</div>
 
 <div class="container">
-<h4><a name="Contact"></a>SSHRC</h4>
+<h4><a name=""></a></h4>
 
     <div class="row-fluid">
         <div class="span2">
         <a href="../assets/sshrc-fip-full-black-eng.jpg">
             <img src="../assets/sshrc-fip-full-black-eng.jpg"
-                  title="SSHRC" alt="SSHRC"/></a>
+                  title="" alt=""/></a>
         </div>
     </div>
 </div>
