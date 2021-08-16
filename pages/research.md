@@ -44,7 +44,7 @@ Michael Sullivan is supported in part by funding from the Social Sciences and Hu
         <div class="span2">
         <a href="../assets/sshrc-fip-full-black-eng.jpg">
             <img src="../assets/sshrc-fip-full-black-eng.jpg" 
-                  title="" alt=""/></a>
+                  title="" alt="" width=500 height=60/></a>
         </div>
     </div>
 </div>
