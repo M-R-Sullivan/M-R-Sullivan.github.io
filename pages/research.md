@@ -36,7 +36,7 @@ market characteristics on various outcomes.*
 
 Michael Sullivan is supported in part by funding from the Social Sciences and Humanities Research Council.
 
-
+<!-- 
 <div class="container">
 <h4><a name=""></a></h4>
 
@@ -49,6 +49,7 @@ Michael Sullivan is supported in part by funding from the Social Sciences and Hu
     </div>
 </div>
 
+-->
 
 <!-- Note: this is how to write a comment in HTML. Everything in here won't show up on your webpage.-->
 
