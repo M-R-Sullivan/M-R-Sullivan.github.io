@@ -43,13 +43,13 @@ Michael Sullivan is supported in part by funding from the Social Sciences and Hu
     <div class="row-fluid">
         <div class="span2">
         <a href="../assets/sshrc-fip-full-black-eng.jpg">
-            <img src="../assets/sshrc-fip-full-black-eng.jpg" style="height:300%;width:300%;"
+            <img src="../assets/sshrc-fip-full-black-eng.jpg" 
                   title="" alt=""/></a>
         </div>
     </div>
 </div>
 
-
+![][../assets/sshrc-fip-full-black-eng.jpg]
 
 <!-- Note: this is how to write a comment in HTML. Everything in here won't show up on your webpage.-->
 
