@@ -9,11 +9,13 @@ a
   color: black;
   text-decoration: none;
   background-color: transparent;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 a:hover
 {
   color: black;
   background: #CAFFFF;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
