@@ -8,6 +8,8 @@ description: Michael Sullivan's research
 
 #### <u>Sources of limited consideration and market power in e-commerce: the case of contact lenses</u>
 
+**Updated February 2022**
+
 [Link ![OS as pdf]({{ BASE_PATH }}/pages/icons16/pdf-icon.png)]({{ BASE_PATH }}/assets/papers/online_search.pdf)<br/>
 
 *The internet has allowed consumers to easily learn about competing retailers' product offerings, and it has allowed firms to enter retail industries without establishing physical stores. Despite these conditions, which could plausibly induce high levels of consumer search effort and cut-throat price competition in retail, consumers exhibit severely limited consideration in online markets and often pay prices significantly above the minimum available one for a particular product. In this paper, I develop a model of sequential consumer search and retailer price competition to assess the roles of search costs and seller differentiation in explaining limited consideration and market power in contact lens e-commerce. My empirical framework exploits the panel nature of my data to estimate the extent of state dependence and the nature of consumers' persistent unobserved tastes for sellers; it also features a novel approach for computing probabilities of sequential search outcomes. I find that various forms of seller differentiation are primarily responsible for limited consideration and market power in contact lens e-commerce.*
