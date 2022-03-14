@@ -4,10 +4,10 @@ title: Michael R Sullivan
 description: I'm a PhD student in the Department of Economics at Yale University. 
 ---
 
-I'm a PhD student in the Department of Economics at Yale University
-who is working in the field of
-industrial organization. My research focuses on online industries,
-and, in particular, the economics of digital platforms, e-commerce, and consumer search. 
+I'm a PhD student in the Department of Economics at Yale University.
+My research focuses on online industries,
+and, in particular, the economics of digital platforms and of e-commerce.
+
 
 I am affiliated with the [Digital Economy Project](https://tobin.yale.edu/digital-economy-project) at the Tobin Center for Economic Policy Research.
 
