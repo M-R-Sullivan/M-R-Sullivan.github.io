@@ -27,8 +27,8 @@ I am affiliated with the [Digital Economy Project](https://tobin.yale.edu/digita
         </div>
 
         <div class="span2">
-        <a href="../assets/photo_2022.jpg">
-            <img src="../assets/photo_2022.jpg"
+        <a href="../assets/second_headshot.jpg">
+            <img src="../assets/second_headshot.jpg"
                   title="Michael Sullivan" alt="Michael Sullivan"/></a>
         </div>
     </div>
