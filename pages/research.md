@@ -14,9 +14,10 @@ description: Michael Sullivan's research
 
 *The internet has allowed consumers to easily learn about competing retailers' product offerings, and it has allowed firms to enter retail industries without establishing physical stores. Despite these conditions, which could plausibly induce high levels of consumer search effort and cut-throat price competition in retail, consumers exhibit severely limited consideration in online markets and often pay prices significantly above the minimum available one for a particular product. In this paper, I develop a model of sequential consumer search and retailer price competition to assess the roles of search costs and seller differentiation in explaining limited consideration and market power in contact lens e-commerce. My empirical framework exploits the panel nature of my data to estimate the extent of state dependence and the nature of consumers' persistent unobserved tastes for sellers; it also features a novel approach for computing probabilities of sequential search outcomes. I find that various forms of seller differentiation are primarily responsible for limited consideration and market power in contact lens e-commerce.*
 
-#### <u>Network externalities in the dating website industry</u>
 
-[Link](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3760700)
+## Works in progress
+
+#### <u>Network externalities in the dating website industry</u>
 
 *This paper characterizes the identification of discrete choice models
 featuring network externalities (i.e. the dependence of 
@@ -32,6 +33,9 @@ for the identification of the model.
 I proceed to estimate a model of dating website choice with network externalities, which
 I used to study how network externalities affect the effects of changes in
 market characteristics on various outcomes.*
+
+#### <u>Price controls in a multi-sided platform market: the case of food delivery</u>
+
 
 
 ## Acknowledgement
