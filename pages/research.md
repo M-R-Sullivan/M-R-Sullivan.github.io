@@ -8,7 +8,7 @@ description: Michael Sullivan's research
 
 #### <u>Sources of limited consideration and market power in e-commerce: the case of contact lenses</u>
 
-**Updated February 2022**
+**Updated May 2022**
 
 [Link ![OS as pdf]({{ BASE_PATH }}/pages/icons16/pdf-icon.png)]({{ BASE_PATH }}/assets/papers/online_search.pdf)<br/>
 
