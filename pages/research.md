@@ -19,6 +19,8 @@ description: Michael Sullivan's research
 
 #### <u>Network externalities in the dating website industry</u>
 
+**Updated draft coming soon**
+
 *This paper characterizes the identification of discrete choice models
 featuring network externalities (i.e. the dependence of 
 consumers' choice-specific payoffs on other consumers' choices)
@@ -36,6 +38,11 @@ market characteristics on various outcomes.*
 
 #### <u>Price controls in a multi-sided platform market: the case of food delivery</u>
 
+**Job market paper**
+
+#### <u>Cross-channel competition and complementarities in US retail</u>
+
+**Joint with Hiroki Saruya**
 
 
 ## Acknowledgement
