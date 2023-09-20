@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.7.5)  13 SEP 2023 17:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.7.5)  20 SEP 2023 12:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -382,9 +382,9 @@ US Re-tail (with Hi-roki Saruya).
  []
 
 
-Overfull \hbox (3.07353pt too wide) in paragraph at lines 95--100
-[]\T1/cmr/m/n/10.95 Market De-sign for Per-sonal Data (with Katja Seim, Dirk Be
-rge-mann, Jacques Crémer,
+Overfull \hbox (3.89168pt too wide) in paragraph at lines 95--100
+\T1/cmr/m/n/10.95 Dinielli, Carl-Christian Groh, Paul Hei-d-hues, Max-imil-lian
+ Schae-fer, Monika Schnitzer,
  []
 
 Package marginnote Info: Margin note 1.5 is on absolute page 1 on input line 10
@@ -409,7 +409,7 @@ Overfull \hbox (1.70584pt too wide) in paragraph at lines 110--116
 st-ern Uni-ver-sity; UNC Chapel
  []
 
-Package marginnote Info: Margin note 1.7 is on absolute page 1 on input line 11
+Package marginnote Info: Margin note 1.7 is on absolute page 2 on input line 11
 8.
 Package marginnote Info: right page because not two side mode on input line 118
 .
@@ -420,26 +420,26 @@ Overfull \hbox (15.09795pt too wide) in paragraph at lines 118--120
 on, Ifo In-sti-tute; Young Economist
  []
 
-Package marginnote Info: Margin note 1.8 is on absolute page 1 on input line 12
+Package marginnote Info: Margin note 1.8 is on absolute page 2 on input line 12
 2.
 Package marginnote Info: right page because not two side mode on input line 122
 .
 Package marginnote Info: xpos seems to be 99.58464pt on input line 122.
-Package marginnote Info: Margin note 1.9 is on absolute page 2 on input line 12
-6.
-Package marginnote Info: right page because not two side mode on input line 126
-.
-Package marginnote Info: xpos seems to be 99.58464pt on input line 126.
 [1
 
 {/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/loc
 al/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
 Package marginnote Info: Margin note 2.1 is on absolute page 2 on input line 12
+6.
+Package marginnote Info: right page because not two side mode on input line 126
+.
+Package marginnote Info: xpos seems to be 99.58464pt on input line 126.
+Package marginnote Info: Margin note 2.2 is on absolute page 2 on input line 12
 8.
 Package marginnote Info: right page because not two side mode on input line 128
 .
 Package marginnote Info: xpos seems to be 99.58464pt on input line 128.
-Package marginnote Info: Margin note 2.2 is on absolute page 2 on input line 13
+Package marginnote Info: Margin note 2.3 is on absolute page 2 on input line 13
 4.
 Package marginnote Info: right page because not two side mode on input line 134
 .
@@ -454,13 +454,13 @@ Package rerunfilecheck Info: File `Sullivan_Michael_CV.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 9600 strings out of 476025
- 150826 string characters out of 5790018
- 1863388 words of memory out of 5000000
+ 9601 strings out of 476025
+ 150836 string characters out of 5790018
+ 1862388 words of memory out of 5000000
  29931 multiletter control sequences out of 15000+600000
  521012 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 80i,6n,79p,332b,431s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 80i,6n,79p,332b,433s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><
 /usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></u
 sr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr
@@ -468,10 +468,10 @@ sr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr
 ocal/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/loc
 al/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local
 /texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb>
-Output written on Sullivan_Michael_CV.pdf (2 pages, 123098 bytes).
+Output written on Sullivan_Michael_CV.pdf (2 pages, 125330 bytes).
 PDF statistics:
- 65 PDF objects out of 1000 (max. 8388607)
- 46 compressed objects within 1 object stream
- 11 named destinations out of 1000 (max. 500000)
+ 66 PDF objects out of 1000 (max. 8388607)
+ 47 compressed objects within 1 object stream
+ 12 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
