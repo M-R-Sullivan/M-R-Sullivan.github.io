@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.7.5)  17 NOV 2023 15:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.7.5)  25 NOV 2023 17:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -392,14 +392,19 @@ Package marginnote Info: Margin note 1.5 is on absolute page 1 on input line 10
 Package marginnote Info: right page because not two side mode on input line 108
 .
 Package marginnote Info: xpos seems to be 99.58464pt on input line 108.
+Package marginnote Info: Margin note 1.6 is on absolute page 1 on input line 11
+1.
+Package marginnote Info: right page because not two side mode on input line 111
+.
+Package marginnote Info: xpos seems to be 99.58464pt on input line 111.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 116.
+(Font)              <10.95> on input line 119.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 116.
+(Font)              <8> on input line 119.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 116.
+(Font)              <6> on input line 119.
 
-Overfull \hbox (1.70584pt too wide) in paragraph at lines 108--119
+Overfull \hbox (1.70584pt too wide) in paragraph at lines 111--122
 \T1/cmr/m/n/10.95 ness School --- De-ci-sion, Risk, and Op-er-a-tions; North-we
 st-ern Uni-ver-sity; UNC Chapel
  []
@@ -409,36 +414,36 @@ st-ern Uni-ver-sity; UNC Chapel
 {/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/loc
 al/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
 Package marginnote Info: Margin note 2.1 is on absolute page 2 on input line 12
-1.
-Package marginnote Info: right page because not two side mode on input line 121
+4.
+Package marginnote Info: right page because not two side mode on input line 124
 .
-Package marginnote Info: xpos seems to be 99.58464pt on input line 121.
+Package marginnote Info: xpos seems to be 99.58464pt on input line 124.
 
-Overfull \hbox (15.09795pt too wide) in paragraph at lines 121--123
+Overfull \hbox (15.09795pt too wide) in paragraph at lines 124--126
 []\T1/cmr/m/n/10.95 5th Doc-toral Work-shop on the Eco-nomics of Dig-i-ti-za-ti
 on, Ifo In-sti-tute; Young Economist
  []
 
 Package marginnote Info: Margin note 2.2 is on absolute page 2 on input line 12
-5.
-Package marginnote Info: right page because not two side mode on input line 125
+8.
+Package marginnote Info: right page because not two side mode on input line 128
 .
-Package marginnote Info: xpos seems to be 99.58464pt on input line 125.
-Package marginnote Info: Margin note 2.3 is on absolute page 2 on input line 12
-9.
-Package marginnote Info: right page because not two side mode on input line 129
+Package marginnote Info: xpos seems to be 99.58464pt on input line 128.
+Package marginnote Info: Margin note 2.3 is on absolute page 2 on input line 13
+2.
+Package marginnote Info: right page because not two side mode on input line 132
 .
-Package marginnote Info: xpos seems to be 99.58464pt on input line 129.
+Package marginnote Info: xpos seems to be 99.58464pt on input line 132.
 Package marginnote Info: Margin note 2.4 is on absolute page 2 on input line 13
-1.
-Package marginnote Info: right page because not two side mode on input line 131
+4.
+Package marginnote Info: right page because not two side mode on input line 134
 .
-Package marginnote Info: xpos seems to be 99.58464pt on input line 131.
-Package marginnote Info: Margin note 2.5 is on absolute page 2 on input line 13
-7.
-Package marginnote Info: right page because not two side mode on input line 137
+Package marginnote Info: xpos seems to be 99.58464pt on input line 134.
+Package marginnote Info: Margin note 2.5 is on absolute page 2 on input line 14
+0.
+Package marginnote Info: right page because not two side mode on input line 140
 .
-Package marginnote Info: xpos seems to be 99.58464pt on input line 137.
+Package marginnote Info: xpos seems to be 99.58464pt on input line 140.
 [2] (./Sullivan_Michael_CV.aux)
 
 LaTeX Font Warning: Size substitutions with differences
@@ -448,10 +453,10 @@ Package rerunfilecheck Info: File `Sullivan_Michael_CV.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 9602 strings out of 476025
- 150846 string characters out of 5790018
- 1861388 words of memory out of 5000000
- 29931 multiletter control sequences out of 15000+600000
+ 9603 strings out of 476025
+ 150857 string characters out of 5790018
+ 1862388 words of memory out of 5000000
+ 29932 multiletter control sequences out of 15000+600000
  521775 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  80i,6n,79p,332b,430s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -463,7 +468,7 @@ ocal/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/loc
 al/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local
 /texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/t
 exlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb>
-Output written on Sullivan_Michael_CV.pdf (2 pages, 144401 bytes).
+Output written on Sullivan_Michael_CV.pdf (2 pages, 146037 bytes).
 PDF statistics:
  71 PDF objects out of 1000 (max. 8388607)
  50 compressed objects within 1 object stream
