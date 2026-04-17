@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bourgogne — Les Classements du Pouvoir</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{min-height:100vh;background:#0a0506;color:#e8ddd0;font-family:'Cormorant Garamond','Garamond','Georgia',serif;-webkit-font-smoothing:antialiased}
+.hdr{position:relative;padding:52px 24px 32px;text-align:center;border-bottom:1px solid rgba(139,0,0,.3);background:linear-gradient(180deg,#12050a,#0a0506);overflow:hidden}
+.hdr::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 50% 0%,rgba(139,0,0,.08) 0%,transparent 70%);pointer-events:none}
+.hdr h1{font-size:52px;font-weight:300;letter-spacing:6px;text-transform:uppercase;color:#c9a96e;margin-bottom:6px;line-height:1.1;position:relative}
+.hdr .sub{font-family:'Libre Baskerville',serif;font-size:13px;font-style:italic;color:#8a7a6a;letter-spacing:2px;margin-bottom:24px;position:relative}
+.hdr .line{width:60px;height:1px;background:#8B0000;margin:0 auto 20px}
+.hdr .cnt{font-size:14px;color:#6a5a4a;letter-spacing:3px;text-transform:uppercase;position:relative}
+
+.legend{max-width:1100px;margin:0 auto;padding:18px 24px 0;display:flex;flex-wrap:wrap;gap:18px;align-items:flex-start}
+.lg{display:flex;flex-direction:column;gap:5px}
+.lg-t{font-family:'Libre Baskerville',serif;font-size:10px;text-transform:uppercase;letter-spacing:2px;color:#5a4a3a}
+.lg-i{display:flex;flex-wrap:wrap;gap:5px}
+.lg-c{font-family:'Libre Baskerville',serif;font-size:10px;padding:3px 9px;border-radius:2px;display:flex;align-items:center;gap:4px;color:#8a7a6a;border:1px solid rgba(255,255,255,.06)}
+.lg-d{width:7px;height:7px;border-radius:50%;display:inline-block}
+
+.ctl{padding:20px 24px;max-width:1100px;margin:0 auto}
+.sb{width:100%;padding:13px 18px;background:rgba(255,255,255,.03);border:1px solid rgba(139,0,0,.2);border-radius:2px;color:#e8ddd0;font-family:'Libre Baskerville',serif;font-size:14px;outline:none;margin-bottom:14px;transition:border-color .3s}
+.sb::placeholder{color:#5a4a3a;font-style:italic}
+.sb:focus{border-color:rgba(139,0,0,.5)}
+.fr{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:10px;align-items:center}
+.fb{padding:6px 13px;background:transparent;border:1px solid rgba(139,0,0,.2);border-radius:2px;color:#8a7a6a;font-family:'Cormorant Garamond',serif;font-size:13px;font-weight:500;letter-spacing:1px;cursor:pointer;transition:all .3s}
+.fb:hover{border-color:rgba(139,0,0,.4);color:#c9a96e}
+.fb.a{background:rgba(139,0,0,.15);border-color:#8B0000;color:#c9a96e}
+.sb2{padding:5px 11px;background:transparent;border:1px solid rgba(255,255,255,.06);border-radius:2px;color:#6a5a4a;font-family:'Libre Baskerville',serif;font-size:11px;cursor:pointer;transition:all .3s}
+.sb2:hover{color:#c9a96e;border-color:rgba(201,169,110,.3)}
+.sb2.a{background:rgba(201,169,110,.08);border-color:rgba(201,169,110,.3);color:#c9a96e}
+.sb2.sa{background:rgba(139,0,0,.12);border-color:rgba(139,0,0,.4);color:#c9a96e}
+.rl{font-family:'Libre Baskerville',serif;font-size:10px;color:#5a4a3a;letter-spacing:2px;text-transform:uppercase;padding:5px 4px 5px 0}
+.rc{font-family:'Libre Baskerville',serif;font-size:12px;color:#5a4a3a;padding:8px 0 4px;letter-spacing:1px}
+
+.tgh{padding:18px 0 8px;display:flex;align-items:baseline;gap:14px;border-bottom:1px solid rgba(139,0,0,.15);margin-bottom:3px}
+.tgl{font-size:22px;font-weight:600;letter-spacing:3px;text-transform:uppercase}
+.tgd{font-family:'Libre Baskerville',serif;font-size:11px;font-style:italic;color:#6a5a4a}
+
+.pr{display:grid;grid-template-columns:44px 1fr auto;align-items:center;padding:11px 10px;border-bottom:1px solid rgba(255,255,255,.03);cursor:pointer;transition:background .2s;gap:12px}
+.pr:hover{background:rgba(139,0,0,.06)}
+.rn{font-size:18px;font-weight:300;text-align:center}
+.pi{min-width:0}
+.pn{font-size:16px;font-weight:500;color:#e8ddd0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pm{display:flex;flex-wrap:wrap;align-items:center;gap:5px;margin-top:3px}
+.pc{font-family:'Libre Baskerville',serif;font-size:11px;color:#7a6a5a}
+.st{font-family:'Libre Baskerville',serif;font-size:9px;padding:1px 6px;border-radius:2px;letter-spacing:.3px}
+.s-cl{color:#a89070;border:1px solid rgba(168,144,112,.3)}
+.s-mo{color:#c45b7c;border:1px solid rgba(196,91,124,.3)}
+.s-na{color:#6a9a5a;border:1px solid rgba(106,154,90,.3)}
+.s-nc{color:#5a8ab4;border:1px solid rgba(90,138,180,.3)}
+.prt{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#5a4a3a;white-space:nowrap;padding:4px 10px;border:1px solid rgba(255,255,255,.05);border-radius:2px}
+
+.pd{display:none;padding:14px 12px 18px;border-bottom:1px solid rgba(255,255,255,.05);animation:fi .3s ease}
+.pd.o{display:flex;gap:22px;align-items:flex-start;flex-wrap:wrap}
+.radc{width:210px;height:210px;flex-shrink:0}
+.dt{flex:1;min-width:220px}
+.dn{font-family:'Libre Baskerville',serif;font-size:12.5px;font-style:italic;color:#9a8a7a;line-height:1.7;margin-bottom:12px}
+.sl{display:flex;flex-direction:column;gap:5px}
+.si{display:flex;align-items:center;gap:9px;font-family:'Libre Baskerville',serif;font-size:11px;color:#7a6a5a}
+.si .l{width:90px;text-align:right}
+.si .bg{flex:1;height:4px;background:rgba(255,255,255,.05);border-radius:2px;max-width:150px}
+.si .fl{height:100%;border-radius:2px;transition:width .4s ease}
+.si .v{width:28px;font-size:13px;color:#9a8a7a;font-weight:500;font-family:'Cormorant Garamond',serif}
+.scale-row{display:flex;align-items:center;gap:8px;margin-top:10px;font-family:'Libre Baskerville',serif;font-size:11px;color:#6a5a4a}
+.scale-label{letter-spacing:1px}
+.scale-dots{display:flex;gap:3px}
+.scale-dot{width:8px;height:8px;border-radius:50%;border:1px solid rgba(255,255,255,.1)}
+.scale-dot.filled{background:#8a7045;border-color:#8a7045}
+.cs{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:300;color:#c9a96e;margin-top:10px}
+.csl{font-family:'Libre Baskerville',serif;font-size:10px;color:#5a4a3a;letter-spacing:1px;text-transform:uppercase}
+
+@keyframes fi{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+
+.ftr{text-align:center;padding:36px 24px 56px;border-top:1px solid rgba(139,0,0,.15);margin-top:28px}
+.ftr p{font-family:'Libre Baskerville',serif;font-size:11px;font-style:italic;color:#4a3a2a;line-height:1.8;max-width:660px;margin:0 auto}
+
+@media(max-width:640px){
+.hdr h1{font-size:32px;letter-spacing:3px}
+.pr{grid-template-columns:36px 1fr;gap:10px}
+.prt{display:none}
+.tgh{flex-direction:column;gap:4px}
+.pd.o{flex-direction:column;align-items:center}
+.radc{width:180px;height:180px}
+.legend{flex-direction:column;gap:10px}
+}
+</style>
+</head>
+<body>
+<div class="hdr">
+<h1>Bourgogne</h1>
+<div class="sub">Les Classements du Pouvoir</div>
+<div class="line"></div>
+<div class="cnt">310 Domaines · 5 Scoring Axes · Scale Indicator · 4 Styles</div>
+</div>
+
+<div class="legend">
+<div class="lg">
+<div class="lg-t">Composite Axes (1–10)</div>
+<div class="lg-i">
+<div class="lg-c"><span class="lg-d" style="background:#c9a96e"></span> Price</div>
+<div class="lg-c"><span class="lg-d" style="background:#A0153E"></span> Critics</div>
+<div class="lg-c"><span class="lg-d" style="background:#B8336A"></span> Reputation</div>
+<div class="lg-c"><span class="lg-d" style="background:#5a8ab4"></span> Terroir</div>
+<div class="lg-c"><span class="lg-d" style="background:#6a9a5a"></span> Consistency</div>
+</div>
+</div>
+<div class="lg">
+<div class="lg-t">Scale (not in composite)</div>
+<div class="lg-i">
+<div class="lg-c">● = production volume (1 micro · 5 major négoce)</div>
+</div>
+</div>
+<div class="lg">
+<div class="lg-t">Styles</div>
+<div class="lg-i">
+<div class="lg-c"><span class="st s-cl">Classical</span></div>
+<div class="lg-c"><span class="st s-mo">Modern</span></div>
+<div class="lg-c"><span class="st s-na">Naturalist</span></div>
+<div class="lg-c"><span class="st s-nc">Neo-Classical</span></div>
+</div>
+</div>
+</div>
+
+<div class="ctl">
+<input class="sb" type="text" placeholder="Search by producer or commune…" id="si">
+<div class="fr" id="tf"></div>
+<div class="fr" id="rf"></div>
+<div class="fr" id="sf"></div>
+<div class="fr" id="so"></div>
+<div class="rc" id="rc"></div>
+<div id="pl"></div>
+</div>
+
+<div class="ftr">
+<p>Price scores are derived from Wine-Searcher average retail prices (USD, ex-tax) for each producer's flagship bottling,
+    mapped via a logarithmic function: Score&nbsp;=&nbsp;0.926&nbsp;×&nbsp;ln(price)&nbsp;+&nbsp;0.7, capped at 10. The reference price is shown in each
+    producer's detail panel. Critics, Reputation, Terroir, and Consistency scores reflect editorial judgement drawing on Meadows, Morris, Kelley,
+    and Robinson. Scale (1–5) measures production volume and does not enter the composite. Style tags acknowledge most estates resist neat
+    categorisation. Rankings are computed by composite score with reputation as tiebreaker. Tap any producer for the full radar chart and data.</p>
+</div>
+
+<script>
+var T=[
+{id:"legendary",l:"Légendaire",c:"#8B0000",d:"The immortals — names that define Burgundy itself"},
+{id:"elite",l:"Élite",c:"#A0153E",d:"Consistently transcendent; among the world's greatest estates"},
+{id:"premier",l:"Premier Ordre",c:"#B8336A",d:"Exceptional quality and reputation; benchmark producers"},
+{id:"excellent",l:"Excellent",c:"#C45B28",d:"Outstanding estates producing wines of real distinction"},
+{id:"distinguished",l:"Distingué",c:"#8A7045",d:"Highly regarded; serious producers with loyal followings"},
+{id:"notable",l:"Notable",c:"#5C7457",d:"Quality-focused domaines worthy of attention and cellaring"}
+];
+var RG=["All","Côte de Nuits","Côte de Beaune","Chablis","Mâconnais"];
+var SL=["All","Classical","Modern","Naturalist","Neo-Classical"];
+var AX=["Price","Critics","Reputation","Terroir","Consistency"];
+var AC=["#c9a96e","#A0153E","#B8336A","#5a8ab4","#6a9a5a"];
+
+// [name, commune, tier, region, note, [price,critics,rep,terroir,consist], [styles], scale(1-5)]
+var RAW=[
+// LEGENDARY
+["Domaine de la Romanée-Conti","Vosne-Romanée","legendary","Côte de Nuits","The ne plus ultra. Monopoles on Romanée-Conti and La Tâche; every bottling a monument.",[10.0,10,10,10,9.5],["Classical"],2,23000],
+["Domaine Leroy","Vosne-Romanée","legendary","Côte de Nuits","Lalou Bize-Leroy's biodynamic marvel — microscopic yields, volcanic intensity.",[10.0,10,10,9.5,9],["Naturalist"],1,18000],
+["Domaine d'Auvenay","Saint-Romain","legendary","Côte de Beaune","Lalou's personal domaine; whites and reds of hallucinatory purity.",[8.5,10,9.5,8,9.5],["Naturalist"],1,5700],
+["Henri Jayer (legacy)","Vosne-Romanée","legendary","Côte de Nuits","The godfather of modern Burgundy; bottles now fetch six figures.",[10.0,10,10,8.5,9],["Classical","Modern"],1,50000],
+["Domaine Coche-Dury","Meursault","legendary","Côte de Beaune","Corton-Charlemagne is peerless; a singularity among white Burgundy.",[9.0,10,10,8.5,9.5],["Classical"],1,6400],
+["Domaine Armand Rousseau","Gevrey-Chambertin","legendary","Côte de Nuits","The reference for Gevrey — Chambertin and Clos de Bèze of crystalline authority.",[8.5,10,10,10,10],["Classical"],2,3900],
+["Domaine Georges & Christophe Roumier","Chambolle-Musigny","legendary","Côte de Nuits","Musigny and Bonnes-Mares of breathtaking finesse and depth.",[9.5,10,10,9.5,9.5],["Classical","Neo-Classical"],1,13000],
+["Domaine Comte Georges de Vogüé","Chambolle-Musigny","legendary","Côte de Nuits","Largest holder of Musigny; returned to supreme form in the 1990s.",[8.0,9.5,10,10,9],["Classical"],2,2500],
+["Maison/Domaine Leflaive","Puligny-Montrachet","legendary","Côte de Beaune","Biodynamic pioneer; the benchmark for Puligny and Chevalier-Montrachet.",[7.5,10,10,9.5,9.5],["Naturalist","Classical"],2,1200],
+["Domaine des Comtes Lafon","Meursault","legendary","Côte de Beaune","Dominique Lafon's whites are hauntingly precise; reds increasingly formidable.",[6.0,10,10,9,9.5],["Classical","Neo-Classical"],2,400],
+// ELITE
+["Domaine Dugat-Py","Gevrey-Chambertin","elite","Côte de Nuits","Old-vine intensity from magnificent Gevrey holdings.",[7.0,9.5,9,9,8.5],["Modern"],1,800],
+["Domaine Dujac","Morey-Saint-Denis","elite","Côte de Nuits","Jacques Seysses' legacy — silky, perfumed Morey.",[7.0,9.5,9.5,9.5,9],["Neo-Classical","Classical"],2,1100],
+["Domaine Méo-Camuzet","Vosne-Romanée","elite","Côte de Nuits","Cros Parantoux is legendary; the Jayer torch carried.",[10.0,9.5,9.5,9.5,9],["Neo-Classical"],2,50000],
+["Domaine Ponsot","Morey-Saint-Denis","elite","Côte de Nuits","Clos de la Roche Vieilles Vignes — one of Burgundy's great wines.",[7.0,9,9,9.5,8],["Classical"],2,700],
+["Domaine Jean-Frédéric Mugnier","Chambolle-Musigny","elite","Côte de Nuits","Ethereal Chambolle of unmatched purity; Clos de la Maréchale.",[8.5,10,9.5,9,9.5],["Classical","Neo-Classical"],2,3500],
+["Domaine Raveneau","Chablis","elite","Chablis","The gold standard for Chablis Grand Cru — mineralité incarnate.",[6.5,10,10,9,9.5],["Classical"],1,500],
+["Domaine de la Pousse d'Or","Volnay","elite","Côte de Beaune","Patrick Landanger elevated this estate to the summit.",[5.5,9,8.5,9,9],["Neo-Classical"],2,200],
+["Domaine Roulot","Meursault","elite","Côte de Beaune","Jean-Marc Roulot's Meursaults rival Coche-Dury.",[9.0,10,9.5,8.5,9.5],["Classical","Neo-Classical"],1,6400],
+["Domaine Marquis d'Angerville","Volnay","elite","Côte de Beaune","Clos des Ducs monopole perfection.",[6.0,9.5,10,9,9.5],["Classical"],2,300],
+["Domaine Sylvain Cathiard","Vosne-Romanée","elite","Côte de Nuits","Sébastien Cathiard; Vosne of exquisite refinement.",[7.5,9.5,9,8.5,9],["Neo-Classical"],1,1200],
+["Domaine Bonneau du Martray","Pernand-Vergelesses","elite","Côte de Beaune","Largest single owner in Corton-Charlemagne.",[6.5,9,9,9,8.5],["Classical","Neo-Classical"],2,480],
+["Domaine Emmanuel Rouget","Vosne-Romanée","elite","Côte de Nuits","Henri Jayer's nephew; Cros Parantoux of great power.",[10.0,9,9,8.5,8.5],["Classical","Modern"],1,50000],
+["Domaine Claude Dugat","Gevrey-Chambertin","elite","Côte de Nuits","Tiny production; Griotte-Chambertin from very old vines.",[6.5,9.5,9,8,9],["Modern"],1,600],
+["Domaine Étienne Sauzet","Puligny-Montrachet","elite","Côte de Beaune","Gérard Boudot's Puligny — purity and tension.",[6.0,9,9,8.5,9],["Classical"],2,300],
+["Maison Louis Jadot","Beaune","elite","Côte de Beaune","Gagey's empire; Domaine holdings in Musigny and Clos Vougeot.",[4.0,8.5,9.5,10,8.5],["Classical"],5,40],
+["Domaine Fourrier","Gevrey-Chambertin","elite","Côte de Nuits","Whole-cluster Gevrey — translucent, tensile, profound.",[7.0,9.5,8.5,8.5,9.5],["Neo-Classical"],1,700],
+["Domaine Bizot","Vosne-Romanée","elite","Côte de Nuits","Micro-production cult domaine.",[7.5,9,8,7.5,8.5],["Naturalist","Neo-Classical"],1,2000],
+["Domaine Robert Groffier","Morey-Saint-Denis","elite","Côte de Nuits","Bonnes-Mares and Clos de Bèze of great depth.",[6.5,9,9,9,8.5],["Classical"],2,500],
+["Domaine Arnoux-Lachaux","Vosne-Romanée","elite","Côte de Nuits","Charles Lachaux catapulted this estate into the stratosphere.",[7.5,9.5,8.5,8.5,9],["Neo-Classical"],1,1900],
+["Domaine du Comte Liger-Belair","Vosne-Romanée","elite","Côte de Nuits","La Romanée monopole — a rival to DRC.",[8.5,9.5,9,9,9],["Neo-Classical"],1,5000],
+// PREMIER ORDRE
+["Domaine Ghislaine Barthod","Chambolle-Musigny","premier","Côte de Nuits","Chambolle Premiers Crus of exquisite femininity.",[5.5,9.5,9,8,9.5],["Classical","Neo-Classical"],1,200],
+["Domaine Hubert Lignier","Morey-Saint-Denis","premier","Côte de Nuits","Laurent Lignier restored greatness; Clos de la Roche.",[6.0,9,8,8.5,8.5],["Neo-Classical"],1,250],
+["Domaine Thibault Liger-Belair","Nuits-Saint-Georges","premier","Côte de Nuits","Biodynamic; Richebourg and Nuits.",[6.0,9,8,8.5,8.5],["Naturalist","Neo-Classical"],2,300],
+["Domaine Faiveley","Nuits-Saint-Georges","premier","Côte de Nuits","Erwan Faiveley raised quality across major holdings.",[6.0,8.5,9,9.5,8.5],["Classical","Modern"],4,250],
+["Domaine Pierre-Yves Colin-Morey","Chassagne-Montrachet","premier","Côte de Beaune","Whites of crystalline precision.",[5.5,9.5,8,7.5,9],["Neo-Classical"],1,150],
+["Domaine de Montille","Volnay","premier","Côte de Beaune","Hubert's classicist philosophy continued.",[5.5,9,9,8.5,9],["Classical"],2,200],
+["Maison Joseph Drouhin","Beaune","premier","Côte de Beaune","Fine domaine and négoce across Burgundy.",[4.5,8.5,9,9.5,8.5],["Classical"],5,50],
+["Domaine Dauvissat","Chablis","premier","Chablis","Stands alongside Raveneau at the Chablis apex.",[6.5,10,9.5,8.5,9.5],["Classical","Naturalist"],1,500],
+["Domaine William Fèvre","Chablis","premier","Chablis","Largest Grand Cru holder in Chablis.",[5.0,8.5,8.5,9.5,8.5],["Classical"],3,80],
+["Domaine Simon Bize","Savigny-lès-Beaune","premier","Côte de Beaune","Chisa Bize; reds and whites of rare purity.",[4.5,9,8,7.5,9],["Neo-Classical","Naturalist"],1,60],
+["Domaine des Lambrays","Morey-Saint-Denis","premier","Côte de Nuits","LVMH-owned Clos des Lambrays monopole.",[6.5,8.5,9,9,8],["Classical","Neo-Classical"],2,600],
+["Domaine de la Vougeraie","Premeaux-Prissey","premier","Côte de Nuits","Boisset's biodynamic flagship.",[5.0,8.5,7.5,9,8.5],["Naturalist"],3,80],
+["Domaine Bruno Clair","Marsannay","premier","Côte de Nuits","Old Clair-Daü vines; Clos de Bèze.",[5.5,8.5,8.5,9,8.5],["Classical"],2,150],
+["Domaine Perrot-Minot","Morey-Saint-Denis","premier","Côte de Nuits","Meticulous Gevrey and Chambolle.",[5.5,9,8,8.5,8.5],["Modern","Neo-Classical"],2,200],
+["Domaine Henri Gouges","Nuits-Saint-Georges","premier","Côte de Nuits","Pioneering domaine bottler; Les Saint-Georges.",[5.0,8.5,9,8.5,8.5],["Classical"],2,100],
+["Domaine Tollot-Beaut","Chorey-lès-Beaune","premier","Côte de Beaune","Corton and Beaune Grèves; age-worthy.",[4.5,8,8,8,8.5],["Classical"],2,60],
+["Domaine Trapet Père et Fils","Gevrey-Chambertin","premier","Côte de Nuits","Biodynamic Chambertin and Latricières.",[5.5,9,8.5,9,8.5],["Naturalist"],2,200],
+["Domaine Michel Lafarge","Volnay","premier","Côte de Beaune","Benchmark Volnay of ethereal grace.",[5.5,9.5,9,8,9.5],["Classical"],1,150],
+["Domaine Hudelot-Noëllat","Chambolle-Musigny","premier","Côte de Nuits","Charles Van Canneyt; RSV is stellar.",[6.0,9,8,8.5,8.5],["Neo-Classical"],1,300],
+["Domaine Denis Mortet","Gevrey-Chambertin","premier","Côte de Nuits","Arnaud Mortet refined the powerful style.",[5.5,9,8.5,8.5,8.5],["Modern","Neo-Classical"],2,200],
+["Maison Bouchard Père et Fils","Beaune","premier","Côte de Beaune","Henriot revived this historic house.",[4.0,8,9,9.5,8],["Classical"],5,40],
+["Domaine Albert Bichot","Beaune","premier","Côte de Beaune","Five domaines across Burgundy.",[4.0,8,8.5,9,8],["Classical"],4,40],
+["Maison Dominique Laurent","Nuits-Saint-Georges","premier","Côte de Nuits","New-oak maximalism with flair.",[5.5,8.5,7.5,7,7.5],["Modern"],1,150],
+["Domaine Arlaud","Morey-Saint-Denis","premier","Côte de Nuits","Biodynamic Morey and Chambolle — rising.",[5.0,9,7.5,8,8.5],["Naturalist","Neo-Classical"],1,80],
+["Domaine d'Eugénie","Vosne-Romanée","premier","Côte de Nuits","Pinault ownership; Grand Échézeaux.",[6.5,8.5,8.5,9,8],["Neo-Classical"],2,500],
+["Benjamin Leroux","Beaune","premier","Côte de Beaune","Négoce and domaine whites of great finesse.",[4.5,9,7.5,7.5,9],["Neo-Classical"],2,70],
+["Domaine Chandon de Briailles","Savigny-lès-Beaune","premier","Côte de Beaune","Biodynamic Corton.",[4.5,8.5,8,8.5,8.5],["Naturalist","Classical"],2,70],
+["Domaine David Duband","Chevannes","premier","Côte de Nuits","Hautes-Côtes base but Grand Cru reach — Chambertin, Échézeaux, Charmes, Clos de la Roche. Whole-cluster pioneer with a light touch; wines of transparency and energy at every level.",[6.0,9,7.5,8.5,9],["Neo-Classical"],2,300],
+["Domaine Georges Mugneret-Gibourg","Vosne-Romanée","premier","Côte de Nuits","Elegant Échézeaux and Ruchottes.",[6.0,9,8.5,8.5,9],["Classical","Neo-Classical"],1,400],
+// EXCELLENT
+["Domaine Bachelet-Monnot","Maranges","excellent","Côte de Beaune","Puligny and Chassagne of great purity.",[5.0,9,7.5,7.5,9],["Neo-Classical"],1,80],
+["Domaine Confuron-Cotétidot","Vosne-Romanée","excellent","Côte de Nuits","Whole-cluster Vosne and Échézeaux.",[5.0,8,7.5,8,8],["Classical"],1,100],
+["Domaine Mongeard-Mugneret","Vosne-Romanée","excellent","Côte de Nuits","Grand Échézeaux and Richebourg.",[5.0,7.5,8,9,7],["Modern","Classical"],3,100],
+["Domaine Lamarche","Vosne-Romanée","excellent","Côte de Nuits","La Grande Rue monopole.",[6.0,7.5,8,9.5,7],["Classical"],1,300],
+["Domaine Marc Colin","Saint-Aubin","excellent","Côte de Beaune","Excellent Saint-Aubin and Chassagne.",[4.0,8,7,7.5,8],["Classical"],2,40],
+["Domaine Patrick Javillier","Meursault","excellent","Côte de Beaune","Meticulous Meursault.",[4.5,8.5,7.5,7,8.5],["Classical"],1,60],
+["Domaine Henri Boillot","Volnay","excellent","Côte de Beaune","Whites are particularly fine.",[5.0,8.5,8,8,8],["Modern","Neo-Classical"],2,80],
+["Domaine Jean Boillot","Volnay","excellent","Côte de Beaune","Clos de la Mouchère monopole.",[4.5,8,7.5,8,8],["Classical"],2,60],
+["Domaine Comte Armand","Pommard","excellent","Côte de Beaune","Clos des Épeneaux monopole.",[5.5,8.5,8.5,8.5,8],["Neo-Classical","Naturalist"],1,150],
+["Maison Lucien Le Moine","Beaune","excellent","Côte de Beaune","Micro-négoce; lees work of rare skill.",[5.5,8.5,7.5,7,8],["Modern"],1,200],
+["Domaine Louis Boillot","Chambolle-Musigny","excellent","Côte de Nuits","Old-vine Gevrey and Volnay.",[4.5,8,7,7.5,8],["Classical"],1,50],
+["Domaine Terres de Velle","Auxey-Duresses","excellent","Côte de Beaune","Under-the-radar Meursault.",[4.0,8,6,6.5,8],["Neo-Classical"],1,30],
+["Domaine Long-Depaquit","Chablis","excellent","Chablis","La Moutonne monopole Grand Cru.",[4.5,8,8,8.5,8],["Classical"],2,60],
+["Domaine Billaud-Simon","Chablis","excellent","Chablis","Under Faiveley; mineral Grand Cru.",[4.5,8,8,8,8],["Classical"],2,50],
+["Domaine Jean-Paul & Benoît Droin","Chablis","excellent","Chablis","Seven Grand Crus.",[4.5,8,7.5,8.5,8],["Classical","Modern"],2,50],
+["Domaine Christian Moreau","Chablis","excellent","Chablis","Taut Les Clos.",[4.0,8,7.5,8,8.5],["Classical"],2,45],
+["Domaine Sérafin Père et Fils","Gevrey-Chambertin","excellent","Côte de Nuits","Powerful Charmes and Cazetiers.",[5.0,8,7.5,7.5,7.5],["Modern"],1,100],
+["Domaine Geantet-Pansiot","Gevrey-Chambertin","excellent","Côte de Nuits","Old-vine Charmes; rich.",[4.5,7.5,7,8,7.5],["Modern"],2,60],
+["Domaine Tortochot","Gevrey-Chambertin","excellent","Côte de Nuits","Chambertin and Mazis; revitalised.",[4.5,7.5,7,8,7],["Classical"],1,60],
+["Domaine Heresztyn-Mazzini","Gevrey-Chambertin","excellent","Côte de Nuits","Pure fruit, silky texture.",[4.5,8,7,7.5,8],["Neo-Classical"],1,60],
+["Domaine Rossignol-Trapet","Gevrey-Chambertin","excellent","Côte de Nuits","Biodynamic; understated elegance.",[5.5,8.5,8,8.5,8.5],["Naturalist"],2,200],
+["Domaine Clos de Tart","Morey-Saint-Denis","excellent","Côte de Nuits","Pinault-owned Grand Cru monopole.",[7.0,8.5,9,9.5,8],["Neo-Classical"],1,800],
+["Domaine Stéphane Magnien","Morey-Saint-Denis","excellent","Côte de Nuits","Rising star; Clos Saint-Denis.",[4.5,8,6.5,7.5,8],["Neo-Classical"],1,50],
+["Domaine Amiot-Servelle","Chambolle-Musigny","excellent","Côte de Nuits","Gentle, fragrant Chambolle.",[4.5,8,7.5,7.5,8.5],["Classical"],1,60],
+["Domaine Gros Frère et Sœur","Vosne-Romanée","excellent","Côte de Nuits","Rich Richebourg and Clos Vougeot.",[5.5,7.5,8,8.5,7],["Modern"],2,200],
+["Domaine Michel Gros","Vosne-Romanée","excellent","Côte de Nuits","Clos des Réas monopole.",[5.0,8,8,8,8.5],["Classical"],2,80],
+["Domaine A.-F. Gros","Pommard","excellent","Côte de Beaune","Richebourg and Échézeaux.",[5.0,8,7.5,8.5,7.5],["Modern","Classical"],2,100],
+["Domaine Anne Gros","Vosne-Romanée","excellent","Côte de Nuits","Vibrant Richebourg.",[5.5,8.5,8,8.5,8],["Modern","Neo-Classical"],1,150],
+["Domaine Taupenot-Merme","Morey-Saint-Denis","excellent","Côte de Nuits","Improving Morey, Gevrey, Chambolle.",[4.5,8,7,8,8],["Neo-Classical"],2,60],
+["Domaine de Courcel","Pommard","excellent","Côte de Beaune","Grand Clos des Épenots.",[5.0,8,7.5,8,7.5],["Classical"],1,80],
+["Domaine Olivier Leflaive","Puligny-Montrachet","excellent","Côte de Beaune","Leflaive négoce; reliable whites.",[7.5,7.5,8,7.5,7.5],["Classical"],3,1200],
+["Domaine Paul Pernot","Puligny-Montrachet","excellent","Côte de Beaune","Bâtard and Bienvenues.",[5.5,8,8,8.5,8],["Classical"],2,150],
+["Domaine Michel Niellon","Chassagne-Montrachet","excellent","Côte de Beaune","Small; Chevalier-Montrachet.",[5.5,8.5,8,8,8.5],["Classical"],1,200],
+["Domaine Jean-Noël Gagnard","Chassagne-Montrachet","excellent","Côte de Beaune","Fine Chassagne tradition.",[4.5,8,8,8,8],["Classical"],2,60],
+["Domaine Fontaine-Gagnard","Chassagne-Montrachet","excellent","Côte de Beaune","Criots-Bâtard and Morgeot.",[4.5,8,7.5,8,8],["Classical"],1,60],
+["Domaine Marc-Antonin Blain","Chassagne-Montrachet","excellent","Côte de Beaune","Rising Chassagne talent.",[4.0,8,6.5,7,8],["Neo-Classical"],1,40],
+["Domaine Comtesse de Chérisey","Puligny-Montrachet","excellent","Côte de Beaune","Blagny and Puligny.",[4.5,8,7,7,8],["Neo-Classical"],1,50],
+// DISTINGUISHED
+["Domaine Antonin Guyon","Savigny-lès-Beaune","distinguished","Côte de Beaune","Corton-Bressandes.",[4.0,7,7,8,7],["Classical"],3,40],
+["Domaine de Bellene","Beaune","distinguished","Côte de Beaune","Nicolas Potel; old-vine Beaune.",[4.0,7.5,6.5,7,7.5],["Neo-Classical"],2,40],
+["Domaine Génot-Boulanger","Meursault","distinguished","Côte de Beaune","Revitalised Meursault.",[4.0,7.5,7,7.5,7.5],["Neo-Classical"],2,40],
+["Domaine Philippe Chavy","Puligny-Montrachet","distinguished","Côte de Beaune","Pure, mineral Puligny.",[4.5,7.5,6.5,7,8],["Classical"],1,50],
+["Domaine Matrot","Meursault","distinguished","Côte de Beaune","Adèle and Elsa Matrot.",[4.0,7.5,7,7,8],["Classical"],2,40],
+["Domaine Albert Morot","Beaune","distinguished","Côte de Beaune","Honest Beaune Premiers Crus.",[4.0,7.5,7.5,7.5,8],["Classical"],2,35],
+["Domaine Parent","Pommard","distinguished","Côte de Beaune","Anne Parent's refined Pommard.",[4.0,7.5,7,7.5,7.5],["Modern","Neo-Classical"],1,40],
+["Domaine Bitouzet-Prieur","Volnay","distinguished","Côte de Beaune","Taillepieds and Clos des Chênes.",[4.0,7.5,7,7.5,8],["Classical"],1,40],
+["Domaine Joseph Voillot","Volnay","distinguished","Côte de Beaune","Champans and Pézerolles.",[4.0,7.5,7,7.5,8],["Classical"],1,35],
+["Domaine Buisson-Charles","Meursault","distinguished","Côte de Beaune","Patrick Essa's Tessons.",[4.0,8,7,7,8],["Neo-Classical"],1,40],
+["Domaine Rémi Jobard","Meursault","distinguished","Côte de Beaune","Pure, reductive Meursaults.",[4.5,8.5,7.5,7,8.5],["Neo-Classical"],1,60],
+["Domaine Antoine Jobard","Meursault","distinguished","Côte de Beaune","Tight, mineral Meursault.",[4.5,8,7,7,8.5],["Neo-Classical"],1,50],
+["Domaine Ballot-Millot","Meursault","distinguished","Côte de Beaune","Genevrières and Charmes.",[4.0,7.5,7,7,7.5],["Classical"],2,45],
+["Domaine Vincent Girardin","Meursault","distinguished","Côte de Beaune","Volume with quality.",[4.0,7,7,7.5,7],["Modern"],3,35],
+["Domaine Alain Chavy","Puligny-Montrachet","distinguished","Côte de Beaune","Clavoillons and Pucelles.",[4.5,7.5,7,7.5,7.5],["Classical"],1,50],
+["Domaine Hubert Lamy","Saint-Aubin","distinguished","Côte de Beaune","Saint-Aubin rivalling Puligny.",[4.5,8.5,7.5,7.5,9],["Neo-Classical"],2,50],
+["Maison Deux Montille","Beaune","distinguished","Côte de Beaune","De Montille négoce.",[4.5,8,7,7,8],["Neo-Classical"],2,50],
+["Domaine Ramonet","Chassagne-Montrachet","distinguished","Côte de Beaune","Montrachet and Bâtard; inconsistent.",[6.0,7.5,9,9,7],["Classical"],2,350],
+["Domaine Bernard Moreau","Chassagne-Montrachet","distinguished","Côte de Beaune","Refined Chassagne whites.",[4.5,8,7.5,7.5,8],["Classical","Neo-Classical"],2,50],
+["Domaine Thomas Morey","Chassagne-Montrachet","distinguished","Côte de Beaune","Reliable Chassagne.",[4.0,7.5,7,7,7.5],["Classical"],1,40],
+["Domaine Blain-Gagnard","Chassagne-Montrachet","distinguished","Côte de Beaune","Bâtard and Criots.",[4.5,7.5,7.5,8,7.5],["Classical"],1,50],
+["Domaine Lamy-Caillat","Chassagne-Montrachet","distinguished","Côte de Beaune","Tiny; Le Montrachet.",[6.5,9,7.5,8,8.5],["Neo-Classical"],1,500],
+["Domaine Philippe Colin","Chassagne-Montrachet","distinguished","Côte de Beaune","Chassagne and Chevalier.",[4.0,7.5,7,7.5,7.5],["Classical"],2,40],
+["Domaine Bruno Colin","Chassagne-Montrachet","distinguished","Côte de Beaune","Equally impressive Chassagne.",[4.0,7.5,7,7.5,7.5],["Classical"],2,40],
+["Domaine Bachelet (Denis)","Gevrey-Chambertin","distinguished","Côte de Nuits","Cult Gevrey; Charmes.",[6.0,9,8,7,8.5],["Classical"],1,300],
+["Domaine Harmand-Geoffroy","Gevrey-Chambertin","distinguished","Côte de Nuits","Mazis and Lavaux St-Jacques.",[4.5,8,7.5,8,8],["Classical"],1,60],
+["Domaine Livera (Philippe)","Gevrey-Chambertin","distinguished","Côte de Nuits","Chapelle-Chambertin.",[4.5,8,7,8,8],["Neo-Classical","Naturalist"],1,50],
+["Domaine Duroche","Gevrey-Chambertin","distinguished","Côte de Nuits","Lavaux Saint-Jacques outstanding.",[4.5,8.5,7,7.5,8.5],["Neo-Classical"],1,50],
+["Domaine Lignier-Michelot","Morey-Saint-Denis","distinguished","Côte de Nuits","Virgile Lignier; refined.",[4.5,8.5,7,7.5,8.5],["Neo-Classical"],1,60],
+["Domaine Coquard Loison-Fleurot","Flagey-Échézeaux","distinguished","Côte de Nuits","Clos Vougeot and Échézeaux.",[4.5,7,6.5,8.5,7],["Classical"],1,60],
+["Domaine Jacques Prieur","Meursault","distinguished","Côte de Beaune","Musigny and Montrachet holdings.",[5.5,7.5,8,9.5,7],["Classical","Modern"],2,200],
+["Domaine de l'Arlot","Nuits-Saint-Georges","distinguished","Côte de Nuits","Clos des Forêts monopole.",[4.5,8,8,8,8],["Neo-Classical","Naturalist"],2,60],
+["Domaine Chevillon (Robert)","Nuits-Saint-Georges","distinguished","Côte de Nuits","Classic Les Saint-Georges.",[4.5,8.5,8.5,8,8.5],["Classical"],2,60],
+["Domaine Prieuré Roch","Nuits-Saint-Georges","distinguished","Côte de Nuits","Biodynamic; Clos de Corvées.",[5.5,8,8,8,7.5],["Naturalist"],1,200],
+["Domaine Sylvain Pataille","Marsannay","distinguished","Côte de Nuits","Marsannay revival leader.",[4.0,8.5,7,7,8.5],["Neo-Classical","Naturalist"],1,30],
+["Domaine Bart","Marsannay","distinguished","Côte de Nuits","Bonnes-Mares from Marsannay.",[4.0,7,7,8,7],["Classical"],2,40],
+["Domaine Pierre Damoy","Gevrey-Chambertin","distinguished","Côte de Nuits","Largest Chambertin holder; improving.",[5.5,7,8,10,6],["Classical"],2,200],
+["Domaine Drouhin-Laroze","Gevrey-Chambertin","distinguished","Côte de Nuits","Grand Cru spread.",[4.5,7,7.5,9,7],["Classical"],2,60],
+["Domaine Castagnier","Morey-Saint-Denis","distinguished","Côte de Nuits","Clos de la Roche.",[4.5,7.5,6.5,8,7],["Classical"],1,50],
+["Maison Camille Giroud","Beaune","distinguished","Côte de Beaune","Revived fine négoce.",[4.5,7.5,7,6.5,7.5],["Classical","Neo-Classical"],2,50],
+["Maison Chanson","Beaune","distinguished","Côte de Beaune","Clos des Fèves monopole.",[4.0,7,7.5,7.5,7],["Classical"],3,40],
+["Domaine Sylvie Esmonin","Gevrey-Chambertin","distinguished","Côte de Nuits","Clos Saint-Jacques.",[5.0,8,7.5,8,8],["Classical"],1,80],
+["Domaine Pernot-Belicard","Puligny-Montrachet","distinguished","Côte de Beaune","Folatières rising.",[4.5,7.5,6.5,7.5,7.5],["Classical"],1,50],
+["Maison Alex Gambal","Beaune","distinguished","Côte de Beaune","American in Burgundy.",[4.0,7.5,6.5,6.5,7.5],["Neo-Classical"],2,35],
+["Domaine Maillard","Chorey-lès-Beaune","distinguished","Côte de Beaune","Corton; reliable.",[4.0,7,6.5,7.5,7.5],["Classical"],2,30],
+["Domaine Poisot","Pernand-Vergelesses","distinguished","Côte de Beaune","RSV and Corton-Charlemagne.",[5.0,7.5,7,8.5,7],["Classical"],1,100],
+["Domaine Pierre Morey","Meursault","distinguished","Côte de Beaune","Ex-Leflaive; Perrières.",[4.5,8,8,7,8],["Naturalist","Classical"],1,60],
+["Domaine Pavelot","Savigny-lès-Beaune","distinguished","Côte de Beaune","La Dominode flagship.",[4.0,7.5,7,7,8],["Classical"],1,30],
+["Domaine Chicotot","Nuits-Saint-Georges","distinguished","Côte de Nuits","Les Saint-Georges.",[4.0,7,6.5,7.5,7],["Classical"],1,35],
+["Domaine Régis Bouvier","Marsannay","distinguished","Côte de Nuits","Marsannay rosé specialist.",[3.5,7,6.5,6.5,7],["Classical"],1,20],
+["Domaine Roblet-Monnot","Volnay","distinguished","Côte de Beaune","Taut, mineral Volnay.",[4.0,7.5,6.5,7,8],["Classical","Neo-Classical"],1,30],
+["Domaine Boillot (Jean-Marc)","Pommard","distinguished","Côte de Beaune","Powerful Rugiens.",[4.5,8,7.5,8,7.5],["Modern"],2,60],
+["Domaine Rebourgeon-Mure","Pommard","distinguished","Côte de Beaune","Old-fashioned Pommard.",[3.5,7,6.5,7,7.5],["Classical"],1,25],
+["Domaine Violot-Guillemard","Pommard","distinguished","Côte de Beaune","Old vines; Rugiens.",[4.0,7,6.5,7.5,7],["Classical"],1,30],
+["Domaine Tessier","Meursault","distinguished","Côte de Beaune","Small Meursault.",[4.0,7.5,6,6.5,7.5],["Neo-Classical"],1,35],
+["Domaine Nudant","Ladoix-Serrigny","distinguished","Côte de Beaune","Corton from Ladoix.",[4.0,7,6.5,7.5,7],["Classical"],2,30],
+["Domaine Clos de la Chapelle","Volnay","distinguished","Côte de Beaune","Fine Volnay.",[4.0,7.5,6,7,7.5],["Neo-Classical"],1,40],
+["Domaine Leflaive (Bâtard branch)","Puligny-Montrachet","distinguished","Côte de Beaune","Bâtard-Montrachet.",[5.5,7.5,7.5,8,7],["Classical"],1,200],
+["Maison Remoissenet Père et Fils","Beaune","distinguished","Côte de Beaune","Historic négoce with one of Burgundy's deepest cellar reserves; extraordinary provenance.",[4.5,7.5,8.5,7,7.5],["Classical"],3,50],
+["Domaine Humbert Frères (ex-Gérard Raphet)","Gevrey-Chambertin","distinguished","Côte de Nuits","Charmes-Chambertin, Clos de Bèze, and Poissenot; honest winemaking, reasonable prices.",[4.5,8,7.5,8.5,8],["Classical"],1,60],
+["Domaine Boillot-Millot","Meursault","distinguished","Côte de Beaune","Meursault Genevrières.",[4.0,7,6.5,7,7],["Classical"],1,35],
+["Domaine Fichet","Maranges","distinguished","Côte de Beaune","Jean-Philippe Fichet; fine Meursault.",[4.0,8,6.5,6.5,8],["Neo-Classical"],1,40],
+["Domaine Rougeot","Meursault","distinguished","Côte de Beaune","Marc Rougeot; Meursault Sous la Velle.",[4.0,7.5,6,6.5,7.5],["Classical"],1,30],
+["Domaine Darviot-Perrin","Monthelie","distinguished","Côte de Beaune","Didier Darviot; Volnay and Chassagne.",[4.0,8,7,7,8],["Classical","Neo-Classical"],1,40],
+["Domaine de Montille (Côte de Nuits)","Vosne-Romanée","distinguished","Côte de Nuits","Expanded holdings under Étienne.",[5.5,8.5,8,8.5,8.5],["Classical"],2,150],
+// NOTABLE
+["Domaine Laroche","Chablis","notable","Chablis","Major Chablis; Les Clos.",[4.0,7,7.5,8.5,7],["Modern","Classical"],4,30],
+["Domaine Louis Michel","Chablis","notable","Chablis","Unoaked purity.",[3.5,7.5,7.5,7.5,8],["Classical"],2,25],
+["Domaine Pinson","Chablis","notable","Chablis","Grand Cru Les Clos.",[3.5,7.5,7,7.5,7.5],["Classical"],2,25],
+["Domaine Vocoret","Chablis","notable","Chablis","Blanchots and Les Clos.",[3.5,7,7,7.5,7],["Classical"],2,25],
+["Domaine Gilbert Picq","Chablis","notable","Chablis","Vau de Vey.",[3.5,7.5,6.5,6.5,7.5],["Classical"],1,20],
+["Domaine Pattes Loup","Chablis","notable","Chablis","Natural wine Chablis pioneer.",[4.0,8,6.5,6.5,7.5],["Naturalist"],1,30],
+["Domaine Samuel Billaud","Chablis","notable","Chablis","Grand Cru finesse.",[4.0,8,7,7.5,8],["Neo-Classical"],1,35],
+["Domaine Nathalie & Gilles Fèvre","Chablis","notable","Chablis","Fourchaume.",[3.5,7,6.5,7.5,7],["Classical"],2,25],
+["Domaine Collet","Chablis","notable","Chablis","Valmur.",[3.5,6.5,6.5,7,7],["Classical"],3,20],
+["Domaine Jean-Claude Bessin","Chablis","notable","Chablis","Valmur of character.",[3.5,7.5,6,7,7.5],["Classical"],1,25],
+["Domaine Leflaive (Mâcon)","Mâcon","notable","Mâconnais","Mâcon-Verzé.",[3.5,7.5,7,6,7.5],["Naturalist","Classical"],2,25],
+["Domaine Guffens-Heynen","Vergisson","notable","Mâconnais","Rare intensity.",[4.0,8.5,7.5,6.5,8],["Naturalist"],1,40],
+["Domaine Valette","Vinzelles","notable","Mâconnais","Late-released, profound.",[4.0,8.5,7,6,8],["Naturalist"],1,35],
+["Domaine Robert-Denogent","Fuissé","notable","Mâconnais","Terroir-driven Pouilly-Fuissé.",[4.0,8,7,6.5,8],["Naturalist","Classical"],1,30],
+["Château de Fuissé","Fuissé","notable","Mâconnais","Les Brûlés.",[3.5,7,7,7,7],["Classical"],3,25],
+["Domaine Bret Brothers","Vinzelles","notable","Mâconnais","Superb Mâcon.",[3.5,8,6.5,6,8],["Naturalist"],1,25],
+["Domaine Daniel & Julien Barraud","Vergisson","notable","Mâconnais","Pouilly-Fuissé En Buland.",[3.5,8,7,6.5,8],["Classical"],1,20],
+["Domaine Cordier Père et Fils","Fuissé","notable","Mâconnais","Pouilly-Fuissé.",[3.5,7.5,6.5,6.5,7.5],["Classical"],2,20],
+["Domaine Ferret","Fuissé","notable","Mâconnais","Jadot-owned; Tournant de Pouilly.",[3.5,7.5,7.5,7,7.5],["Classical"],2,25],
+["Domaine de la Bongran","Clessé","notable","Mâconnais","Late-harvested Viré-Clessé.",[3.5,8,7,5.5,7.5],["Naturalist","Classical"],1,20],
+["Maison Frédéric Esmonin","Gevrey-Chambertin","notable","Côte de Nuits","Ruchottes and Mazis.",[4.0,7,6.5,7,7],["Classical"],1,40],
+["Domaine Marchand-Grillot","Gevrey-Chambertin","notable","Côte de Nuits","Improving Gevrey.",[4.0,7,6.5,7,7],["Neo-Classical"],1,30],
+["Domaine Guillard","Gevrey-Chambertin","notable","Côte de Nuits","Ruchottes Grand Cru.",[4.0,7,6,7,7],["Classical"],1,30],
+["Domaine Magnien (Michel)","Morey-Saint-Denis","notable","Côte de Nuits","Négoce and domaine.",[4.0,7.5,6.5,7,7],["Modern","Neo-Classical"],2,35],
+["Domaine Rion (Patrice)","Nuits-Saint-Georges","notable","Côte de Nuits","Les Amoureuses.",[4.5,7.5,7,7.5,7],["Classical"],1,50],
+["Domaine Daniel Rion","Nuits-Saint-Georges","notable","Côte de Nuits","Beaux Monts.",[4.0,7,7,7.5,7],["Classical","Modern"],2,35],
+["Domaine Jean Chauvenet","Nuits-Saint-Georges","notable","Côte de Nuits","Ripe, modern Nuits.",[3.5,7,6,6.5,7],["Modern"],1,25],
+["Domaine Chauvenet-Chopin","Nuits-Saint-Georges","notable","Côte de Nuits","Classic Nuits.",[3.5,7,6.5,6.5,7],["Classical"],1,25],
+["Domaine Bertrand Ambroise","Premeaux-Prissey","notable","Côte de Nuits","Generous Nuits.",[4.0,7,7,7.5,7],["Modern"],2,30],
+["Domaine Chantal Lescure","Nuits-Saint-Georges","notable","Côte de Nuits","Organic Pommard and Nuits.",[4.0,7.5,6.5,7.5,7.5],["Naturalist","Neo-Classical"],2,30],
+["Domaine Jean-Jacques Girard","Savigny-lès-Beaune","notable","Côte de Beaune","Savigny Serpentières.",[3.5,6.5,6,6.5,7],["Classical"],1,20],
+["Domaine Rollin","Pernand-Vergelesses","notable","Côte de Beaune","Honest Pernand.",[3.5,7,6,6.5,7],["Classical"],1,20],
+["Domaine Rapet Père et Fils","Pernand-Vergelesses","notable","Côte de Beaune","Vincent Rapet's Corton-Charlemagne and Pernand; dependable estate.",[4.0,7,7,7.5,7.5],["Classical"],2,30],
+["Domaine Comte Senard","Aloxe-Corton","notable","Côte de Beaune","Biodynamic Corton.",[4.0,7,7,8,7],["Naturalist"],2,30],
+["Domaine Follin-Arbelet","Aloxe-Corton","notable","Côte de Beaune","Corton-Charlemagne and RSV.",[4.0,7,6.5,8,7],["Classical"],1,40],
+["Domaine Louis Latour","Beaune","notable","Côte de Beaune","Historic; Corton-Charlemagne.",[4.0,6.5,8.5,9,6.5],["Modern","Classical"],5,35],
+["Domaine Coste-Caumartin","Pommard","notable","Côte de Beaune","Boucherottes monopole.",[3.5,7,6.5,7,7],["Classical"],1,25],
+["Domaine Diconne","Auxey-Duresses","notable","Côte de Beaune","Auxey and Meursault.",[3.5,7,6,6,7],["Classical"],1,20],
+["Domaine Prunier (Vincent)","Auxey-Duresses","notable","Côte de Beaune","Fine Auxey.",[3.5,7,6,6.5,7],["Classical"],1,20],
+["Domaine Roux Père et Fils","Saint-Aubin","notable","Côte de Beaune","Broad Côte de Beaune.",[3.5,6.5,6.5,7,7],["Classical"],3,20],
+["Domaine Vincent Dauvissat-Camus","Chablis","notable","Chablis","Full label; see Dauvissat.",[6.0,10,9.5,8.5,9.5],["Classical","Naturalist"],1,350],
+["Domaine Jean-Marc Roulot (négoce)","Meursault","notable","Côte de Beaune","Roulot négoce bottlings.",[7.0,8.5,8,7,8.5],["Classical","Neo-Classical"],2,800],
+["Domaine Rémi Rollin","Pernand-Vergelesses","notable","Côte de Beaune","Honest terroir.",[3.5,7,6,7,7],["Classical"],1,20],
+// ADDITIONAL NOTABLE (expanding to 300)
+["Domaine Leflaive (Olivier) négoce","Puligny-Montrachet","notable","Côte de Beaune","Olivier's négoce.",[4.5,7.5,7,7,7.5],["Classical"],2,50],
+["Domaine Comtesse de Chérisey (Blagny)","Blagny","notable","Côte de Beaune","Blagny and Meursault parcels.",[4.0,7.5,6.5,7,7.5],["Neo-Classical"],1,40],
+["Maison Prosper Maufoux","Santenay","notable","Côte de Beaune","Old Santenay négoce.",[3.0,6.5,6.5,6.5,6.5],["Classical"],3,15],
+["Domaine Capuano-Ferreri","Santenay","notable","Côte de Beaune","Value Santenay.",[3.5,7,6,6.5,7],["Classical"],1,18],
+["Domaine Lucien Muzard","Santenay","notable","Côte de Beaune","Santenay specialist; Clos Faubard.",[3.5,7,6.5,7,7],["Classical"],2,18],
+["Domaine Roger Belland","Santenay","notable","Côte de Beaune","Criots-Bâtard from Santenay.",[3.5,7,7,7.5,7],["Classical"],2,25],
+["Domaine Bachelet-Ramonet","Chassagne-Montrachet","notable","Côte de Beaune","Small Chassagne estate.",[6.0,7,6.5,7,7],["Classical"],1,350],
+["Domaine Fernand & Laurent Pillot","Chassagne-Montrachet","notable","Côte de Beaune","Morgeot and Grandes Ruchottes.",[3.5,7,6.5,7,7.5],["Classical"],2,25],
+["Domaine Hubert Bouzereau-Gruère","Meursault","notable","Côte de Beaune","Charmes and Genevrières.",[4.0,7,6.5,7,7],["Classical"],1,30],
+["Domaine Michel Bouzereau","Meursault","notable","Côte de Beaune","Reliable Meursault.",[3.5,7,6.5,7,7.5],["Classical"],2,25],
+["Domaine Coche-Bizouard","Meursault","notable","Côte de Beaune","Distant Coche cousin; Goutte d'Or.",[3.5,7,6.5,6.5,7],["Classical"],1,25],
+["Domaine Michelot","Meursault","notable","Côte de Beaune","Charmes and Genevrières.",[3.5,7,7,7,7],["Classical"],2,25],
+["Domaine Latour-Giraud","Meursault","notable","Côte de Beaune","Genevrières; improving.",[4.0,7,6.5,7,7],["Classical"],2,30],
+["Domaine Ente (Arnaud)","Meursault","notable","Côte de Beaune","Cult micro-production Meursault; retired from winemaking.",[7.5,9,7.5,7,8.5],["Neo-Classical"],1,2000],
+["Domaine François Mikulski","Meursault","notable","Côte de Beaune","Biodynamic; Meursault Charmes.",[4.5,8,7,7,8],["Naturalist","Neo-Classical"],1,50],
+["Domaine Jacques Carillon","Puligny-Montrachet","notable","Côte de Beaune","Split from Louis Carillon; Referts and Perrières.",[4.5,8,7,7.5,8],["Classical"],1,60],
+["Domaine Louis Carillon","Puligny-Montrachet","notable","Côte de Beaune","Other half; Bienvenues.",[4.5,7.5,7.5,7.5,7.5],["Classical"],1,50],
+["Domaine Chavy-Chouet","Puligny-Montrachet","notable","Côte de Beaune","Romaric Chavy; Pommard and Puligny.",[4.0,7.5,6.5,7,7.5],["Neo-Classical"],1,30],
+["Domaine Alain Gras","Saint-Romain","notable","Côte de Beaune","Value Saint-Romain whites.",[3.5,7,6,6,7.5],["Classical"],2,18],
+["Domaine du Château de Puligny-Montrachet","Puligny-Montrachet","notable","Côte de Beaune","Étienne de Montille manages.",[4.5,7.5,7,7.5,7.5],["Classical","Neo-Classical"],2,60],
+["Domaine Jean Chartron","Puligny-Montrachet","notable","Côte de Beaune","Clos du Cailleret monopole.",[4.5,7.5,7.5,8,7],["Classical"],2,50],
+["Domaine Henri Clerc","Puligny-Montrachet","notable","Côte de Beaune","Bienvenues and Chevalier.",[4.5,7,7,7.5,6.5],["Classical"],1,50],
+["Domaine Labet","Côte du Jura","notable","Mâconnais","Julien Labet; Jura crossover influence.",[3.5,8,6.5,6,8],["Naturalist"],1,25],
+["Domaine de la Soufrandière (Bret Brothers)","Vinzelles","notable","Mâconnais","Biodynamic Pouilly-Vinzelles.",[3.5,8,6.5,6,8],["Naturalist"],1,25],
+["Domaine Thibert","Fuissé","notable","Mâconnais","Pouilly-Fuissé and Saint-Véran.",[3.5,7,6.5,6.5,7],["Classical"],2,18],
+["Domaine Jean-Antoine Mélinand","Mercurey","notable","Côte de Beaune","Côte Chalonnaise value.",[3.0,6.5,5.5,6,7],["Classical"],1,15],
+["Domaine Michel Juillot","Mercurey","notable","Côte de Beaune","Leading Mercurey domaine.",[3.5,7,7,7,7],["Classical"],2,20],
+["Domaine Faiveley (Mercurey)","Mercurey","notable","Côte de Beaune","Faiveley's Chalonnaise arm.",[3.5,7,7.5,7.5,7],["Classical"],3,25],
+["Domaine Dureuil-Janthial","Rully","notable","Côte de Beaune","Vincent Dureuil; outstanding Rully.",[4.5,8.5,7,6.5,8.5],["Neo-Classical"],1,60],
+["Domaine Paul et Marie Jacqueson","Rully","notable","Côte de Beaune","Fine Rully whites.",[3.5,7.5,6.5,6.5,7.5],["Classical"],1,25],
+["Domaine A. et P. de Villaine","Bouzeron","notable","Côte de Beaune","Aubert de Villaine's personal estate; Bouzeron Aligoté.",[4.0,7.5,8,6,8],["Classical"],1,30],
+["Maison Olivier Leflaive (négoce)","Puligny-Montrachet","notable","Côte de Beaune","Broader négoce selection.",[4.0,7,7,7,7],["Classical"],3,30],
+["Maison Chartron et Trébuchet","Puligny-Montrachet","notable","Côte de Beaune","Négoce; Puligny and Chassagne.",[3.5,6.5,6.5,6.5,6.5],["Classical"],3,20],
+["Domaine Rossignol (Nicolas)","Volnay","notable","Côte de Beaune","Volnay and Pommard.",[4.0,7,6,7,7],["Neo-Classical"],1,30],
+["Domaine Jean-Marc Bouley","Volnay","notable","Côte de Beaune","Thomas Bouley; rising Volnay.",[4.0,7.5,6.5,7,7.5],["Neo-Classical"],1,35],
+["Domaine Yvon Clerget","Volnay","notable","Côte de Beaune","Thibaud Clerget; Premier Cru Caillerets.",[4.0,7.5,7,7,7.5],["Classical","Neo-Classical"],1,35],
+["Domaine Coillot","Marsannay","notable","Côte de Nuits","Old-vine Marsannay.",[3.5,7,6,6.5,7],["Classical"],1,18],
+["Domaine Collotte","Marsannay","notable","Côte de Nuits","Philippe Collotte; small, serious.",[3.5,7,5.5,6,7],["Classical"],1,18],
+["Domaine René Leclerc","Gevrey-Chambertin","notable","Côte de Nuits","Combe aux Moines.",[4.0,7,6.5,7,7],["Classical"],1,30],
+["Domaine Philippe Leclerc","Gevrey-Chambertin","notable","Côte de Nuits","Long-aged, controversial Gevrey.",[4.0,7,7,7,6.5],["Modern"],1,35],
+["Domaine Henri Rebourseau","Gevrey-Chambertin","notable","Côte de Nuits","Grand Cru spread; underperforming.",[4.0,6.5,7,9,6],["Classical"],2,40],
+["Maison Frédéric Magnien","Morey-Saint-Denis","notable","Côte de Nuits","Négoce across the Côte.",[4.0,7.5,6.5,6.5,7],["Modern","Neo-Classical"],2,30],
+["Domaine Clos de la Chapelle (Vougeot)","Vougeot","notable","Côte de Nuits","Small Vougeot estate.",[4.0,7,6,7,7],["Classical"],1,30],
+["Domaine Charlopin-Tissier","Gevrey-Chambertin","notable","Côte de Nuits","Philippe Charlopin; ripe, extracted.",[4.5,7.5,7,7.5,7],["Modern"],2,60],
+["Domaine Truchetet","Nuits-Saint-Georges","notable","Côte de Nuits","Small Premeaux estate.",[3.5,6.5,5.5,6.5,7],["Classical"],1,18],
+["Domaine Machard de Gramont","Nuits-Saint-Georges","notable","Côte de Nuits","Broad Nuits range.",[3.5,7,6.5,7,7],["Classical"],2,25],
+["Maison Pierre André","Aloxe-Corton","notable","Côte de Beaune","Corton estates.",[3.5,6.5,7,8,6.5],["Classical"],3,25],
+["Domaine Denis Père et Fils","Pernand-Vergelesses","notable","Côte de Beaune","Corton and Pernand.",[3.5,6.5,6,7,7],["Classical"],2,20],
+["Domaine Germain","Beaune","notable","Côte de Beaune","Beaune Vignes Franches.",[3.5,7,6.5,7,7],["Classical"],2,20],
+["Domaine Prieur-Brunet","Santenay","notable","Côte de Beaune","Santenay and Chassagne.",[3.5,6.5,6.5,7,6.5],["Classical"],2,20],
+["Domaine Fleurot-Larose","Santenay","notable","Côte de Beaune","Chassagne and Santenay.",[3.5,6.5,6,6.5,6.5],["Classical"],2,18],
+["Domaine Séguinot-Bordet","Chablis","notable","Chablis","Fourchaume and Vaillons.",[3.5,7,6,7,7],["Classical"],2,18],
+["Domaine Christian Moreau Père et Fils","Chablis","notable","Chablis","Les Clos; taut.",[4.0,7.5,7,7.5,8],["Classical"],2,45],
+["Domaine Guillon et Fils","Gevrey-Chambertin","notable","Côte de Nuits","Jean-Michel Guillon; Gevrey Champeaux.",[3.5,7,6.5,7,7],["Modern"],1,25],
+["Domaine Jean-Philippe Marchand","Gevrey-Chambertin","notable","Côte de Nuits","Négoce; Griottes and Charmes.",[4.0,7,6.5,7,6.5],["Modern"],2,30],
+["Domaine Tremblay","Chablis","notable","Chablis","Gérard Tremblay; Fourchaume.",[3.5,7,6,7,7],["Classical"],2,18],
+["Domaine des Malandes","Chablis","notable","Chablis","Lyne Marchive; Vau de Vey.",[3.5,7,6.5,7,7],["Classical"],2,18],
+["Domaine du Chardonnay","Chablis","notable","Chablis","Cooperative-quality Chablis.",[3.0,6.5,6,7,6.5],["Classical"],2,12],
+["Domaine Alain Geoffroy","Chablis","notable","Chablis","Beauroy; volume Chablis.",[3.0,6.5,6,6.5,6.5],["Classical"],3,15],
+["Domaine Pommier (Isabelle & Denis)","Chablis","notable","Chablis","Côte de Léchet; organic.",[3.5,7.5,6,6.5,7.5],["Naturalist"],1,18],
+["Domaine Moreau-Naudet","Chablis","notable","Chablis","Vaillons and Montée de Tonnerre; concentrated.",[4.0,8,7,7,8],["Neo-Classical"],1,40],
+["Domaine Savary","Chablis","notable","Chablis","Francine and Olivier Savary; Fourchaume.",[3.5,7,6,6.5,7],["Classical"],1,18],
+["Domaine Clotilde Davenne","Chablis","notable","Chablis","Crémant and still Chablis.",[3.0,7,6,6.5,7],["Classical"],2,15],
+["Domaine du Colombier","Chablis","notable","Chablis","Thierry Mothe; Vau de Vey.",[3.0,6.5,6,6.5,7],["Classical"],2,15],
+["Domaine Gautheron","Chablis","notable","Chablis","Cyril Gautheron; Les Fourneaux.",[3.5,7,6.5,7,7],["Classical"],2,18],
+["Domaine Jean-Pierre Grossot","Chablis","notable","Chablis","Fleys estate; Fourneaux and Côte de Troesmes.",[3.5,7.5,6,6.5,7.5],["Classical"],1,20],
+["Domaine d'Henri (Michel Laroche)","Chablis","notable","Chablis","Laroche personal project.",[3.5,7.5,7,7,7],["Classical"],1,25],
+["Domaine Sigaut","Chambolle-Musigny","notable","Côte de Nuits","Les Sentiers; old vines.",[4.0,7,6.5,7,7],["Classical"],1,35],
+["Domaine Felettig","Chambolle-Musigny","notable","Côte de Nuits","Gilbert et Christine; Les Cras.",[4.5,7.5,6.5,7,7.5],["Classical"],1,50],
+["Domaine Lecheneaut","Nuits-Saint-Georges","notable","Côte de Nuits","Philippe et Vincent; Damodes.",[3.5,7,6.5,7,7.5],["Classical"],2,25],
+["Domaine Jean-Jacques Confuron","Nuits-Saint-Georges","notable","Côte de Nuits","Sophie Meunier; Romanée-Saint-Vivant.",[5.0,7.5,7,8,7],["Classical"],1,100],
+["Domaine Gavignet","Nuits-Saint-Georges","notable","Côte de Nuits","Les Argillats.",[3.5,7,6,6.5,7],["Classical"],1,18],
+["Maison Henri de Villamont","Savigny-lès-Beaune","notable","Côte de Beaune","Swiss-owned négoce.",[3.5,6.5,6.5,7,6.5],["Classical"],3,20],
+["Domaine Maurice Ecard","Savigny-lès-Beaune","notable","Côte de Beaune","Serpentières.",[3.5,7,6.5,6.5,7],["Classical"],1,20],
+["Domaine Girard (Philippe)","Savigny-lès-Beaune","notable","Côte de Beaune","Lavières; value Savigny.",[3.5,7,6,6.5,7],["Classical"],1,18],
+["Domaine Lejeune","Pommard","notable","Côte de Beaune","Rugiens; Aubert de Villaine consults.",[4.0,7.5,7,7.5,7],["Classical"],1,30],
+["Domaine Launay-Horiot","Beaune","notable","Côte de Beaune","Raymond Launay; Pommard and Beaune.",[3.5,7,6,6.5,7],["Neo-Classical"],1,25],
+["Maison Roche de Bellene","Beaune","notable","Côte de Beaune","Nicolas Potel négoce.",[4.0,7.5,6,6.5,7.5],["Neo-Classical"],2,40],
+["Domaine Dublère","Savigny-lès-Beaune","notable","Côte de Beaune","Blair Pethel; American in Savigny.",[3.5,7.5,5.5,6.5,7.5],["Neo-Classical"],1,25],
+["Domaine Chevrot","Maranges","notable","Côte de Beaune","Pablo Chevrot; biodynamic Maranges.",[3.5,7.5,6,6.5,7.5],["Naturalist","Neo-Classical"],2,18],
+["Domaine Contat-Grangé","Maranges","notable","Côte de Beaune","Clos de la Boutière.",[3.0,6.5,5.5,6,7],["Classical"],1,12],
+["Domaine Girardin (Jacques)","Santenay","notable","Côte de Beaune","La Comme and Gravières.",[3.5,7,6.5,7,7],["Classical"],2,18],
+["Domaine Larue","Saint-Aubin","notable","Côte de Beaune","Chatenière and Murgers des Dents de Chien.",[3.5,7,6.5,7,7.5],["Classical"],1,25],
+["Domaine Sylvain Langoureau","Saint-Aubin","notable","Côte de Beaune","En Remilly; pure whites.",[3.5,7.5,6,6.5,7.5],["Neo-Classical"],1,25],
+["Domaine Henri Prudhon","Saint-Aubin","notable","Côte de Beaune","Gérard Prudhon; consistent Saint-Aubin.",[3.5,7,6.5,6.5,7.5],["Classical"],1,20],
+["Domaine Deux Roches","Saint-Véran","notable","Mâconnais","Christian Collovray and Jean-Luc Terrier.",[3.0,7,6.5,6.5,7],["Classical"],3,15],
+["Domaine Rijckaert","Leynes","notable","Mâconnais","Jean Rijckaert; Mâcon and Jura.",[3.5,7.5,6,6,7.5],["Naturalist"],1,18],
+["Domaine Saumaize-Michelin","Vergisson","notable","Mâconnais","Roger Saumaize; Pouilly-Fuissé Clos de la Roche.",[3.5,7.5,6.5,6.5,7.5],["Classical"],2,20],
+["Domaine Jacques Saumaize","Vergisson","notable","Mâconnais","Brother's separate estate.",[3.5,7,6.5,6.5,7],["Classical"],1,18],
+["Domaine Manciat-Poncet","Charnay-lès-Mâcon","notable","Mâconnais","Claude Manciat; ripe Pouilly-Fuissé.",[3.5,7,6.5,6,7],["Classical"],2,18],
+["Domaine Frantz Chagnoleau","Pierreclos","notable","Mâconnais","Saint-Véran and Pouilly-Fuissé.",[3.5,7.5,6,6,7.5],["Naturalist"],1,18],
+["Domaine La Croix Senaillet","Davayé","notable","Mâconnais","Richard and Stéphane Martin; organic.",[3.0,7.5,6,6,7.5],["Naturalist"],2,15],
+["Domaine Cornin","Chaintré","notable","Mâconnais","Dominique Cornin; Pouilly-Fuissé Les Chevrières.",[3.5,7.5,6,6,7.5],["Naturalist"],1,18],
+["Domaine Héritiers du Comte Lafon (Mâcon)","Milly-Lamartine","notable","Mâconnais","Dominique Lafon's Mâcon project; Clos de la Crochette.",[4.0,8,7.5,6,8],["Classical","Neo-Classical"],2,30],
+["Domaine Merlin","La Roche-Vineuse","notable","Mâconnais","Olivier Merlin; Saint-Véran and Pouilly-Fuissé.",[3.5,7.5,6.5,6.5,7.5],["Classical"],2,18],
+["Domaine Guillot-Broux","Cruzille","notable","Mâconnais","Biodynamic Mâcon-Cruzille; Beaumont and Les Genièvrières.",[3.5,8,6.5,6,8],["Naturalist"],1,18],
+["Domaine Jean Grivot","Vosne-Romanée","premier","Côte de Nuits","Canonical Vosne-Romanée estate with Echézeaux, Clos de Vougeot, and Richebourg; one of the Côte de Nuits' reference domaines.",[6.0,9,9,9,9],["Neo-Classical","Classical"],2,250],
+["Domaine Georges Lignier et Fils","Morey-Saint-Denis","excellent","Côte de Nuits","Traditional Morey-Saint-Denis source for Clos Saint-Denis, Clos de la Roche, and Chambolle-Musigny; serious old-school authority.",[4.5,8.5,7.5,8.5,8],["Classical"],1,60],
+["Domaine François Carillon","Puligny-Montrachet","excellent","Côte de Beaune","One of Puligny's strongest modern references after the Carillon split; incisive, complete whites with premier cru depth.",[4.5,8.5,8,8,8.5],["Classical","Neo-Classical"],1,60],
+["Domaine Marc Morey et Fils","Chassagne-Montrachet","excellent","Côte de Beaune","Long one of Chassagne's benchmark white-wine estates; Virondot, En Virondot, and grand cru holdings with notable consistency.",[4.0,8.5,8,8,8.5],["Classical"],2,40],
+["Domaine Moreau-Coffinet","Chassagne-Montrachet","excellent","Côte de Beaune","Dynamic Chassagne address producing focused, high-toned whites and increasingly sought-after reds.",[4.0,8.5,7.5,8,8.5],["Neo-Classical"],1,35],
+["Domaine Pierre Boisson","Meursault","distinguished","Côte de Beaune","Micro-production Meursault and Bourgogne from one of the region's most coveted recent family labels.",[5.0,8.5,7.5,7,8],["Neo-Classical"],1,100],
+["Domaine Boisson-Vadot","Meursault","distinguished","Côte de Beaune","Family source of characterful Meursaults and high-value Bourgognes; reputation far outstrips its modest scale.",[5.0,8,7.5,7,8],["Classical","Neo-Classical"],1,80],
+["Domaine Alice et Olivier de Moor","Courgis","distinguished","Chablis","Cult natural-leaning Chablis and Saint-Bris estate whose bottles command devotion well beyond its appellation level.",[3.5,8.5,7.5,7,8.5],["Naturalist","Neo-Classical"],1,25],
+["Domaine Tribut","Chablis","distinguished","Chablis","Classic, quietly revered Chablis producer best known for compelling Beauroy and finely judged premier cru bottlings.",[3.5,8,7.5,7.5,8],["Classical"],1,25]
+];
+
+// Compute composite, sort, assign rank
+RAW.forEach(function(p){p.push((p[5][0]+p[5][1]+p[5][2]+p[5][3]+p[5][4])/5);});
+RAW.sort(function(a,b){if(b[9]!==a[9])return b[9]-a[9];return b[5][2]-a[5][2];});
+RAW.forEach(function(p,i){p.push(i+1);}); // index 10 = rank
+
+var at="all",ar="All",as="All",st="",er=null,sb="rank";
+function tf2(id){for(var i=0;i<T.length;i++)if(T[i].id===id)return T[i];return T[0];}
+function cm(s){return((s[0]+s[1]+s[2]+s[3]+s[4])/5).toFixed(1);}
+function sc(s){return s.toLowerCase().replace(/\-/g,"-");}
+
+function drawR(cv,s){
+  var ctx=cv.getContext("2d"),W=cv.width,H=cv.height,cx=W/2,cy=H/2,R=W*.36;
+  ctx.clearRect(0,0,W,H);
+  var n=5,ag=[];for(var i=0;i<n;i++)ag.push(-Math.PI/2+(2*Math.PI*i)/n);
+  [.2,.4,.6,.8,1].forEach(function(f){ctx.beginPath();for(var i=0;i<n;i++){var x=cx+Math.cos(ag[i])*R*f,y=cy+Math.sin(ag[i])*R*f;i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);}ctx.closePath();ctx.strokeStyle="rgba(255,255,255,.07)";ctx.lineWidth=1;ctx.stroke();});
+  for(var i=0;i<n;i++){ctx.beginPath();ctx.moveTo(cx,cy);ctx.lineTo(cx+Math.cos(ag[i])*R,cy+Math.sin(ag[i])*R);ctx.strokeStyle="rgba(255,255,255,.09)";ctx.lineWidth=1;ctx.stroke();}
+  ctx.beginPath();for(var i=0;i<n;i++){var v=s[i]/10,x=cx+Math.cos(ag[i])*R*v,y=cy+Math.sin(ag[i])*R*v;i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);}ctx.closePath();ctx.fillStyle="rgba(139,0,0,.18)";ctx.fill();ctx.strokeStyle="rgba(201,169,110,.55)";ctx.lineWidth=1.5;ctx.stroke();
+  for(var i=0;i<n;i++){var v=s[i]/10,x=cx+Math.cos(ag[i])*R*v,y=cy+Math.sin(ag[i])*R*v;ctx.beginPath();ctx.arc(x,y,3.5,0,Math.PI*2);ctx.fillStyle=AC[i];ctx.fill();}
+  ctx.font="10px 'Libre Baskerville',serif";ctx.textAlign="center";var lr=R+18;
+  for(var i=0;i<n;i++){var x=cx+Math.cos(ag[i])*lr,y=cy+Math.sin(ag[i])*lr;ctx.fillStyle=AC[i];ctx.fillText(AX[i],x,y+3);}
+}
+
+function gf(){
+  var f=RAW.filter(function(p){
+    if(at!=="all"&&p[2]!==at)return false;
+    if(ar!=="All"&&p[3]!==ar)return false;
+    if(as!=="All"){var ok=false;for(var i=0;i<p[6].length;i++)if(p[6][i]===as)ok=true;if(!ok)return false;}
+    if(st){var q=st.toLowerCase();if(p[0].toLowerCase().indexOf(q)===-1&&p[1].toLowerCase().indexOf(q)===-1)return false;}
+    return true;
+  });
+  if(sb==="rank")return f.slice().sort(function(a,b){return a[10]-b[10];});
+  if(sb==="composite")return f.slice().sort(function(a,b){return b[9]-a[9];});
+  if(sb==="scale")return f.slice().sort(function(a,b){return b[7]-a[7];});
+  var idx={price:0,critics:1,reputation:2,terroir:3,consistency:4}[sb];
+  if(idx!==undefined)return f.slice().sort(function(a,b){return b[5][idx]-a[5][idx];});
+  return f;
+}
+
+function pH(p,tier){
+  var isO=er===p[10],r=p[10];
+  var tags="";for(var i=0;i<p[6].length;i++){var s=p[6][i];tags+='<span class="st s-'+sc(s).replace("neo-classical","nc").replace("classical","cl").replace("modern","mo").replace("naturalist","na")+'">'+s+'</span>';}
+  var h='<div class="pr" data-rank="'+r+'">';
+  h+='<div class="rn" style="color:'+tier.c+'">'+r+'</div>';
+  h+='<div class="pi"><div class="pn">'+p[0]+'</div>';
+  h+='<div class="pm"><span class="pc">'+p[1]+'</span>'+tags+'</div></div>';
+  h+='<div class="prt">'+p[3]+'</div></div>';
+  h+='<div class="pd'+(isO?" o":"")+'">';
+  h+='<div class="radc"><canvas id="rc'+r+'" width="210" height="210" style="width:210px;height:210px"></canvas></div>';
+  h+='<div class="dt"><div class="dn">'+p[4]+'</div><div class="sl">';
+  for(var i=0;i<5;i++){var v=p[5][i],pct=v/10*100;h+='<div class="si"><span class="l">'+AX[i]+'</span><div class="bg"><div class="fl" style="width:'+pct+'%;background:'+AC[i]+'"></div></div><span class="v">'+v+'</span></div>';}
+  h+='</div>';
+  // Scale dots
+  h+='<div class="scale-row"><span class="scale-label">Scale</span><div class="scale-dots">';
+  for(var i=1;i<=5;i++){h+='<div class="scale-dot'+(i<=p[7]?' filled':'')+'"></div>';}
+  h+='</div></div>';
+  h+='<div class="scale-row"><span class="scale-label">Ref. Price</span><span style="color:#c9a96e;font-family:Cormorant Garamond,serif;font-size:15px;font-weight:500;letter-spacing:0.5px">$'+p[8].toLocaleString()+'</span><span style="font-size:9px;color:#5a4a3a;margin-left:4px">(flagship avg.)</span></div>';
+  h+='<div class="cs">'+cm(p[5])+'</div><div class="csl">Composite Score</div></div></div>';
+  return h;
+}
+
+function render(){
+  var list=document.getElementById("pl"),ct=document.getElementById("rc");
+  var f=gf();
+  ct.textContent=f.length+" producer"+(f.length!==1?"s":"")+" shown";
+  var useTiers=(sb==="rank"),html="";
+  if(useTiers){
+    var show=at==="all"?T:T.filter(function(t){return t.id===at;});
+    show.forEach(function(tier){
+      var g=f.filter(function(p){return p[2]===tier.id;});
+      if(!g.length)return;
+      html+='<div class="tgh"><span class="tgl" style="color:'+tier.c+'">'+tier.l+'</span><span class="tgd">'+tier.d+'</span></div>';
+      g.forEach(function(p){html+=pH(p,tier);});
+    });
+  }else{
+    f.forEach(function(p){html+=pH(p,tf2(p[2]));});
+  }
+  list.innerHTML=html;
+  if(er!==null){var cv=document.getElementById("rc"+er);if(cv){var pr=RAW.find(function(p){return p[10]===er;});if(pr)drawR(cv,pr[5]);}}
+  list.querySelectorAll(".pr").forEach(function(row){
+    row.addEventListener("click",function(){var r=parseInt(this.dataset.rank);er=er===r?null:r;render();});
+  });
+}
+
+// Build filters
+function bf(id,items,cls,g,s,countFn){
+  var c=document.getElementById(id),h="";
+  items.forEach(function(item){
+    var label=typeof item==="object"?item.l||item.label:item;
+    var val=typeof item==="object"?item.id:item;
+    var cnt=countFn?countFn(val):"";
+    h+='<button class="'+cls+(g()===val?" a":"")+'" data-v="'+val+'">'+label+cnt+'</button>';
+  });
+  c.innerHTML=h;
+  c.querySelectorAll("button").forEach(function(btn){
+    btn.addEventListener("click",function(){
+      s(this.dataset.v);er=null;
+      c.querySelectorAll("button").forEach(function(b){b.classList.remove("a");b.classList.remove("sa");b.style.borderColor="";});
+      this.classList.add(cls.indexOf("sa")!==-1?"sa":"a");
+      if(id==="tf"&&g()!=="all"){var t=tf2(g());if(t)this.style.borderColor=t.c;}
+      render();
+    });
+  });
+}
+
+var ti=[{id:"all",l:"All"}].concat(T.map(function(t){return{id:t.id,l:t.l};}));
+bf("tf",ti,"fb",function(){return at;},function(v){at=v;},function(v){return" ("+(v==="all"?RAW.length:RAW.filter(function(p){return p[2]===v;}).length)+")";});
+bf("rf",RG,"sb2",function(){return ar;},function(v){ar=v;});
+bf("sf",SL,"sb2",function(){return as;},function(v){as=v;});
+
+var soEl=document.getElementById("so");
+soEl.innerHTML='<span class="rl">Sort by</span>';
+["rank","composite","price","critics","reputation","terroir","consistency","scale"].forEach(function(s){
+  var btn=document.createElement("button");
+  btn.className="sb2"+(s==="rank"?" sa":"");
+  btn.dataset.v=s;
+  btn.textContent=s.charAt(0).toUpperCase()+s.slice(1);
+  btn.addEventListener("click",function(){
+    sb=this.dataset.v;er=null;
+    soEl.querySelectorAll(".sb2").forEach(function(b){b.classList.remove("sa");});
+    this.classList.add("sa");render();
+  });
+  soEl.appendChild(btn);
+});
+
+document.getElementById("si").addEventListener("input",function(){st=this.value;er=null;render();});
+render();
+</script>
+</body>
+</html>
