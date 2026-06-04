@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  24 APR 2026 13:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  6 MAY 2026 15:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -416,93 +416,93 @@ Package marginnote Info: right page because not two side mode on input line 122
 .
 Package marginnote Info: xpos seems to be 99.58464pt on input line 122.
 Package marginnote Info: Margin note 2.2 is on absolute page 2 on input line 12
-6.
-Package marginnote Info: right page because not two side mode on input line 126
+7.
+Package marginnote Info: right page because not two side mode on input line 127
 .
-Package marginnote Info: xpos seems to be 99.58464pt on input line 126.
+Package marginnote Info: xpos seems to be 99.58464pt on input line 127.
 
-Overfull \hbox (1.83206pt too wide) in paragraph at lines 126--133
+Overfull \hbox (1.83206pt too wide) in paragraph at lines 127--134
 \T1/cmr/m/n/10.95 (Sauder School of Busi-ness); On-line Sem-i-nar on the Eco-no
 mics of Plat-forms (Toulouse
  []
 
 Package marginnote Info: Margin note 2.3 is on absolute page 2 on input line 13
-4.
-Package marginnote Info: right page because not two side mode on input line 134
+5.
+Package marginnote Info: right page because not two side mode on input line 135
 .
-Package marginnote Info: xpos seems to be 99.58464pt on input line 134.
+Package marginnote Info: xpos seems to be 99.58464pt on input line 135.
 Package marginnote Info: Margin note 2.4 is on absolute page 2 on input line 14
-3.
-Package marginnote Info: right page because not two side mode on input line 143
+4.
+Package marginnote Info: right page because not two side mode on input line 144
 .
-Package marginnote Info: xpos seems to be 99.58464pt on input line 143.
+Package marginnote Info: xpos seems to be 99.58464pt on input line 144.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 151.
+(Font)              <10.95> on input line 152.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 151.
+(Font)              <8> on input line 152.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 151.
+(Font)              <6> on input line 152.
 
-Overfull \hbox (1.70584pt too wide) in paragraph at lines 143--154
+Overfull \hbox (1.70584pt too wide) in paragraph at lines 144--155
 \T1/cmr/m/n/10.95 ness School --- De-ci-sion, Risk, and Op-er-a-tions; North-we
 st-ern Uni-ver-sity; UNC Chapel
  []
 
 Package marginnote Info: Margin note 2.5 is on absolute page 2 on input line 15
-6.
-Package marginnote Info: right page because not two side mode on input line 156
+7.
+Package marginnote Info: right page because not two side mode on input line 157
 .
-Package marginnote Info: xpos seems to be 99.58464pt on input line 156.
+Package marginnote Info: xpos seems to be 99.58464pt on input line 157.
 
-Overfull \hbox (15.09795pt too wide) in paragraph at lines 156--158
+Overfull \hbox (15.09795pt too wide) in paragraph at lines 157--159
 []\T1/cmr/m/n/10.95 5th Doc-toral Work-shop on the Eco-nomics of Dig-i-ti-za-ti
 on, Ifo In-sti-tute; Young Economist
  []
 
 Package marginnote Info: Margin note 2.6 is on absolute page 2 on input line 16
-0.
-Package marginnote Info: right page because not two side mode on input line 160
+1.
+Package marginnote Info: right page because not two side mode on input line 161
 .
-Package marginnote Info: xpos seems to be 99.58464pt on input line 160.
+Package marginnote Info: xpos seems to be 99.58464pt on input line 161.
 
 
 [2]
 Package marginnote Info: Margin note 3.1 is on absolute page 3 on input line 18
-0.
-Package marginnote Info: right page because not two side mode on input line 180
+1.
+Package marginnote Info: right page because not two side mode on input line 181
 .
-Package marginnote Info: xpos seems to be 99.58464pt on input line 180.
+Package marginnote Info: xpos seems to be 99.58464pt on input line 181.
 Package marginnote Info: Margin note 3.2 is on absolute page 3 on input line 18
-2.
-Package marginnote Info: right page because not two side mode on input line 182
+3.
+Package marginnote Info: right page because not two side mode on input line 183
 .
-Package marginnote Info: xpos seems to be 99.58464pt on input line 182.
+Package marginnote Info: xpos seems to be 99.58464pt on input line 183.
 Package marginnote Info: Margin note 3.3 is on absolute page 3 on input line 18
-8.
-Package marginnote Info: right page because not two side mode on input line 188
+9.
+Package marginnote Info: right page because not two side mode on input line 189
 .
-Package marginnote Info: xpos seems to be 99.58464pt on input line 188.
+Package marginnote Info: xpos seems to be 99.58464pt on input line 189.
 Package marginnote Info: Margin note 3.4 is on absolute page 3 on input line 19
-0.
-Package marginnote Info: right page because not two side mode on input line 190
+1.
+Package marginnote Info: right page because not two side mode on input line 191
 .
-Package marginnote Info: xpos seems to be 99.58464pt on input line 190.
+Package marginnote Info: xpos seems to be 99.58464pt on input line 191.
 
-Overfull \hbox (14.00723pt too wide) in paragraph at lines 190--191
+Overfull \hbox (14.00723pt too wide) in paragraph at lines 191--192
 []\T1/cmr/m/n/10.95 Insight De-vel-op-ment Grant, So-cial Sci-ences and Hu-man-
 i-ties Re-search Coun-cil (SSHRC),
  []
 
 Package marginnote Info: Margin note 3.5 is on absolute page 3 on input line 19
-2.
-Package marginnote Info: right page because not two side mode on input line 192
+3.
+Package marginnote Info: right page because not two side mode on input line 193
 .
-Package marginnote Info: xpos seems to be 99.58464pt on input line 192.
+Package marginnote Info: xpos seems to be 99.58464pt on input line 193.
 Package marginnote Info: Margin note 3.6 is on absolute page 3 on input line 19
-4.
-Package marginnote Info: right page because not two side mode on input line 194
+5.
+Package marginnote Info: right page because not two side mode on input line 195
 .
-Package marginnote Info: xpos seems to be 99.58464pt on input line 194.
+Package marginnote Info: xpos seems to be 99.58464pt on input line 195.
 
 
 [3] (./Sullivan_Michael_CV.aux)
@@ -534,7 +534,7 @@ ocal/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/loc
 al/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local
 /texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/t
 exlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb>
-Output written on Sullivan_Michael_CV.pdf (3 pages, 150340 bytes).
+Output written on Sullivan_Michael_CV.pdf (3 pages, 154550 bytes).
 PDF statistics:
  83 PDF objects out of 1000 (max. 8388607)
  60 compressed objects within 1 object stream
